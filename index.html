@@ -1,463 +1,389 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #0f7001; -webkit-text-stroke: #0f7001}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #900112; -webkit-text-stroke: #900112}
-    span.s1 {font-kerning: none; background-color: #fffffe}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #fffffe; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #fffffe; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #000000; background-color: #fffffe; -webkit-text-stroke: 0px #000000}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #fffffe; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #6b0001; background-color: #fffffe; -webkit-text-stroke: 0px #6b0001}
-    span.s7 {font-kerning: none; color: #137646; background-color: #fffffe; -webkit-text-stroke: 0px #137646}
-    span.s8 {font-kerning: none; color: #900112; background-color: #fffffe; -webkit-text-stroke: 0px #900112}
-    span.s9 {font-kerning: none; color: #0f7001; background-color: #fffffe; -webkit-text-stroke: 0px #0f7001}
-    span.s10 {font-kerning: none; color: #093c94; background-color: #fffffe; -webkit-text-stroke: 0px #093c94}
-    span.s11 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Ultimate Queen Tribute Experience - Hammer to Fall">
+    <title>Hammer to Fall - Queen Tribute Band</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --queen-gold-400: #f6d365;
+            --queen-gold-500: #d4af37;
+            --queen-gold-600: #aa8c2c;
+            --queen-purple: #2d1b4e;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .page-transition {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        
+        .active-tab {
+            border-bottom: 2px solid var(--queen-gold-500);
+            color: var(--queen-gold-500);
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Hammer to Fall | Official Queen Tribute Band</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Tailwind CSS CDN --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>tailwind.config = {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>theme: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>extend: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>colors: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>queenGold: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">400</span><span class="s1">: </span><span class="s8">'#f6d365'</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">500</span><span class="s1">: </span><span class="s8">'#d4af37'</span><span class="s1">, </span><span class="s9">// Classic Regal Metallic Gold</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">600</span><span class="s1">: </span><span class="s8">'#aa8c2c'</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>queenPurple: </span><span class="s8">'#2d1b4e'</span><span class="s1"> </span><span class="s9">// Deep Velvet Purple</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Custom scrollbar and smooth transitions */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">html</span><span class="s1"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">scroll-behavior:</span><span class="s4"> </span><span class="s10">smooth</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.page-transition</span><span class="s4"> {</span></p>
-<p class="p7"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">opacity</span><span class="s4"> </span><span class="s7">0.3s</span><span class="s4"> </span><span class="s1">ease-in-out</span><span class="s4">, </span><span class="s1">transform</span><span class="s4"> </span><span class="s7">0.3s</span><span class="s4"> </span><span class="s1">ease-in-out</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.active-tab</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">border-bottom:</span><span class="s4"> </span><span class="s7">2px</span><span class="s4"> </span><span class="s10">solid</span><span class="s4"> </span><span class="s10">#d4af37</span><span class="s4">; </span><span class="s1">/* queenGold-500 */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s10">#d4af37</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-950 text-neutral-100 font-sans min-h-screen flex flex-col"</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Header / Navigation Bar --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 sticky top-0 z-50"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Band Logo --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center cursor-pointer"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('home')"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-queenGold-400 via-yellow-200 to-queenGold-600"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>HAMMER TO FALL</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Desktop Navigation Menu --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:flex space-x-8 text-sm font-semibold tracking-widest uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('home')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-home"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-tab py-2 text-neutral-300 hover:text-queenGold-500 transition active-tab"</span><span class="s3">&gt;</span><span class="s4">Home</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('music')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-music"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-tab py-2 text-neutral-300 hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Media</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('shows')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-shows"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-tab py-2 text-neutral-300 hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Tour Dates</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('bio')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-bio"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-tab py-2 text-neutral-300 hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Biography</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('contact')"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-contact"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-tab py-2 text-neutral-300 hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Contact</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Mobile Navigation Menu Toggle Button --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"md:hidden"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu-btn"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-neutral-400 hover:text-white focus:outline-none"</span><span class="s4"> </span><span class="s2">aria-label</span><span class="s3">=</span><span class="s1">"Toggle Menu"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-6 w-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"menu-icon"</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M4 6h16M4 12h16M4 18h16"</span><span class="s4"> </span><span class="s3">/&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Mobile Dynamic Navigation Submenu --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:hidden bg-neutral-900 border-b border-neutral-800 px-4 pt-2 pb-4 space-y-2"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('home')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-left py-2 px-3 rounded text-neutral-300 hover:bg-neutral-800 hover:text-queenGold-500 transition uppercase text-xs font-bold tracking-wider"</span><span class="s3">&gt;</span><span class="s4">Home</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('music')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-left py-2 px-3 rounded text-neutral-300 hover:bg-neutral-800 hover:text-queenGold-500 transition uppercase text-xs font-bold tracking-wider"</span><span class="s3">&gt;</span><span class="s4">Media</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('shows')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-left py-2 px-3 rounded text-neutral-300 hover:bg-neutral-800 hover:text-queenGold-500 transition uppercase text-xs font-bold tracking-wider"</span><span class="s3">&gt;</span><span class="s4">Tour Dates</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('bio')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-left py-2 px-3 rounded text-neutral-300 hover:bg-neutral-800 hover:text-queenGold-500 transition uppercase text-xs font-bold tracking-wider"</span><span class="s3">&gt;</span><span class="s4">Biography</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('contact')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block w-full text-left py-2 px-3 rounded text-neutral-300 hover:bg-neutral-800 hover:text-queenGold-500 transition uppercase text-xs font-bold tracking-wider"</span><span class="s3">&gt;</span><span class="s4">Contact</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Notification Message Box / Custom Alert Alternative --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"custom-alert"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-queenGold-500 text-neutral-950 font-bold px-6 py-3 rounded-full shadow-lg items-center space-x-2 transition opacity duration-300"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"alert-text"</span><span class="s3">&gt;</span><span class="s1">Message Sent Successfully!</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Main Content Area housing our virtual subpages --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">main</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-grow"</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- SUBPAGE: HOME --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"page-home"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"page-transition min-h-[calc(100vh-5rem)] flex flex-col justify-center relative overflow-hidden px-4 sm:px-6 lg:px-8 py-12"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Custom Queen Royal Velvet Purple and Crest Ambient Background Glow --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(45,27,78,0.4),transparent_60%)]"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(212,175,55,0.05),transparent_50%)]"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto text-center relative z-10"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Integrated Queen Gold Crest Image Asset --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mb-6 flex justify-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-32 h-32 sm:w-40 sm:h-40 relative rounded-full overflow-hidden border border-queenGold-500/30 p-1 bg-neutral-950/80 backdrop-blur-sm shadow-xl shadow-queenGold-500/10"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"input_file_0.png"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Hammer to Fall Queen Crest"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full object-contain"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-queenGold-500 uppercase tracking-widest text-xs font-bold sm:text-sm bg-queenGold-500/10 border border-queenGold-500/20 px-4 py-1.5 rounded-full"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>The Ultimate Queen Tribute Experience</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-6 text-5xl sm:text-7xl font-black tracking-tight text-white mb-6 uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>Live Phenomenon </span><span class="s3">&lt;</span><span class="s6">br</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hidden sm:inline"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-transparent bg-clip-text bg-gradient-to-r from-queenGold-400 via-yellow-100 to-queenGold-500"</span><span class="s3">&gt;</span><span class="s4">Hammer to Fall</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-neutral-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>Bringing the raw power, sweeping dynamic orchestrations, and majestic stage energy of Queen to theatres across the UK. Based out of Norwich.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row justify-center items-center gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('music')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-queenGold-400 to-queenGold-500 text-neutral-950 font-bold rounded-lg hover:from-yellow-300 hover:to-queenGold-400 transition tracking-widest uppercase text-sm shadow-lg shadow-queenGold-500/20"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>Watch Showreel</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"navigateTo('shows')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full sm:w-auto px-8 py-4 bg-neutral-900 border border-neutral-700 text-white font-bold rounded-lg hover:bg-neutral-800 transition tracking-widest uppercase text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>Book Tickets</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Clean Video Player Showcase Section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-16 max-w-4xl mx-auto w-full text-center relative z-10 px-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-sm font-bold text-queenGold-500 uppercase tracking-widest mb-6 flex items-center justify-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-2 h-2 bg-queenGold-500 rounded-full mr-3 animate-pulse"</span><span class="s3">&gt;&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s4"> Featured Promotional Showreel</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full aspect-video rounded-2xl overflow-hidden border border-queenGold-500/30 shadow-2xl bg-neutral-950 relative"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Clean YouTube Embed Link Integration --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">iframe</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full"</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://www.youtube.com/embed/QdmP47O5CYQ"</span><span class="s4"> </span><span class="s2">title</span><span class="s3">=</span><span class="s1">"Hammer To Fall Promo Video"</span><span class="s4"> </span><span class="s2">frameborder</span><span class="s3">=</span><span class="s1">"0"</span><span class="s4"> </span><span class="s2">allow</span><span class="s3">=</span><span class="s1">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span><span class="s4"> </span><span class="s2">allowfullscreen</span><span class="s3">&gt;&lt;/</span><span class="s6">iframe</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Featured Band Banner Placeholder --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-16 max-w-5xl mx-auto w-full rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl relative group"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/1200x500/171717/d4af37?text=HAMMER+TO+FALL+-+LIVE+IN+CONCERT"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Band Performing Live"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-auto object-cover aspect-[21/9]"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- SUBPAGE: MUSIC / MEDIA --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"page-music"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"page-transition hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center max-w-3xl mx-auto mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Media Showcase</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mt-4 text-neutral-400 font-light"</span><span class="s3">&gt;</span><span class="s1">Experience the soundscapes and production fidelity of our live setup.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 lg:grid-cols-3 gap-10"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Music Streaming Platform Embed Side --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-2 space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-900 p-6 rounded-xl border border-neutral-800"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold text-white mb-4 flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"w-2.5 h-2.5 bg-queenGold-500 rounded-full mr-2"</span><span class="s3">&gt;&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1"> Setlist Audio Previews</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s1">&lt;!-- Simulated Music Player Integration Area --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-slate-950 rounded-lg p-4 border border-slate-800 flex items-center space-x-4 mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 flex items-center justify-center rounded-full bg-queenGold-500 text-neutral-950 flex-shrink-0 hover:scale-105 transition"</span><span class="s4"> </span><span class="s2">aria-label</span><span class="s3">=</span><span class="s1">"Play track"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M8 5v14l11-7z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex-grow min-w-0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-semibold text-white truncate"</span><span class="s3">&gt;</span><span class="s1">Hammer to Fall</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-neutral-500 truncate"</span><span class="s3">&gt;</span><span class="s1">Live Session Cover</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-neutral-400 font-mono hidden sm:inline"</span><span class="s3">&gt;</span><span class="s4">04:22</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-slate-950 rounded-lg p-4 border border-slate-800 flex items-center space-x-4 mb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 flex items-center justify-center rounded-full bg-neutral-800 text-neutral-400 flex-shrink-0 hover:text-queenGold-500 transition"</span><span class="s4"> </span><span class="s2">aria-label</span><span class="s3">=</span><span class="s1">"Play track"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M8 5v14l11-7z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex-grow min-w-0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-semibold text-neutral-300 truncate"</span><span class="s3">&gt;</span><span class="s1">Bohemian Rhapsody</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-neutral-500 truncate"</span><span class="s3">&gt;</span><span class="s1">Live Orchestral Suite</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-neutral-400 font-mono hidden sm:inline"</span><span class="s3">&gt;</span><span class="s4">05:55</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-slate-950 rounded-lg p-4 border border-slate-800 flex items-center space-x-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-12 h-12 flex items-center justify-center rounded-full bg-neutral-800 text-neutral-400 flex-shrink-0 hover:text-queenGold-500 transition"</span><span class="s4"> </span><span class="s2">aria-label</span><span class="s3">=</span><span class="s1">"Play track"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-5 h-5 fill-current"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M8 5v14l11-7z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"flex-grow min-w-0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm font-semibold text-neutral-300 truncate"</span><span class="s3">&gt;</span><span class="s1">Somebody To Love</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-neutral-500 truncate"</span><span class="s3">&gt;</span><span class="s1">Vocal Harmonies Run</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-neutral-400 font-mono hidden sm:inline"</span><span class="s3">&gt;</span><span class="s4">04:50</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Albums/Merch Sidebar --&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://placehold.co/400x400/2d1b4e/d4af37?text=PROMO+MEDIA+KIT"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Promo Material"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-auto aspect-square object-cover"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"p-6"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h4</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-white"</span><span class="s3">&gt;</span><span class="s1">Digital Press Kit (EPK)</span><span class="s3">&lt;/</span><span class="s6">h4</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xs text-queenGold-500 font-semibold mt-1"</span><span class="s3">&gt;</span><span class="s1">Theatre Portfolio • 2026</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 grid grid-cols-1 gap-2 text-center text-xs font-bold tracking-wider uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Downloading Press Materials Pack... (Mock Action)'); return false;"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-950 border border-neutral-800 text-queenGold-500 py-3 px-3 rounded hover:bg-neutral-800 hover:text-white transition tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Download Assets</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- SUBPAGE: TOUR DATES --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"page-shows"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"page-transition hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Live Calendar</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mt-4 text-neutral-400 font-light"</span><span class="s3">&gt;</span><span class="s1">Upcoming appearances at clubs and small theatres.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Tour Dates Table Component --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden shadow-2xl"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"divide-y divide-neutral-800"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">&lt;!-- Tour Row 1 --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 sm:flex sm:items-center sm:justify-between hover:bg-neutral-800/40 transition"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center space-x-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-neutral-950 border border-queenGold-500/20 rounded-lg p-3 w-16 flex-shrink-0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold text-queenGold-500 uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Oct</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xl font-black text-white"</span><span class="s3">&gt;</span><span class="s4">12</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-white"</span><span class="s3">&gt;</span><span class="s1">The Maddermarket Theatre</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-neutral-400"</span><span class="s3">&gt;</span><span class="s1">Norwich, United Kingdom</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 sm:mt-0 flex items-center justify-between sm:space-x-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-amber-400 font-semibold uppercase tracking-wider bg-amber-400/10 px-2.5 py-1 rounded"</span><span class="s3">&gt;</span><span class="s4">Low Tickets</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Redirecting to theatre box office portal...')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gradient-to-r from-queenGold-400 to-queenGold-500 hover:from-yellow-300 hover:to-queenGold-400 text-neutral-950 text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded transition"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>Tickets</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">&lt;!-- Tour Row 2 --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 sm:flex sm:items-center sm:justify-between hover:bg-neutral-800/40 transition"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center space-x-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-neutral-950 border border-neutral-800 rounded-lg p-3 w-16 flex-shrink-0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold text-neutral-400 uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Oct</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xl font-black text-white"</span><span class="s3">&gt;</span><span class="s4">24</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-white"</span><span class="s3">&gt;</span><span class="s1">The Fisher Theatre</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-neutral-400"</span><span class="s3">&gt;</span><span class="s1">Bungay, United Kingdom</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 sm:mt-0 flex items-center justify-between sm:space-x-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-queenGold-500 font-semibold uppercase tracking-wider bg-queenGold-500/10 px-2.5 py-1 rounded"</span><span class="s3">&gt;</span><span class="s4">On Sale</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Redirecting to theatre box office portal...')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gradient-to-r from-queenGold-400 to-queenGold-500 hover:from-yellow-300 hover:to-queenGold-400 text-neutral-950 text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded transition"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>Tickets</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">&lt;!-- Tour Row 3 --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-6 sm:flex sm:items-center sm:justify-between hover:bg-neutral-800/40 transition"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center space-x-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center bg-neutral-950 border border-neutral-800 rounded-lg p-3 w-16 flex-shrink-0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold text-neutral-400 uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Nov</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xl font-black text-white"</span><span class="s3">&gt;</span><span class="s4">07</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg font-bold text-white"</span><span class="s3">&gt;</span><span class="s1">The Waterfront</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-sm text-neutral-400"</span><span class="s3">&gt;</span><span class="s1">Norwich, United Kingdom</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 sm:mt-0 flex items-center justify-between sm:space-x-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-queenGold-500 font-semibold uppercase tracking-wider bg-queenGold-500/10 px-2.5 py-1 rounded"</span><span class="s3">&gt;</span><span class="s4">On Sale</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Redirecting to box office setup...')"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-gradient-to-r from-queenGold-400 to-queenGold-500 hover:from-yellow-300 hover:to-queenGold-400 text-neutral-950 text-xs font-bold uppercase tracking-widest px-5 py-2.5 rounded transition"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>Tickets</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- SUBPAGE: BIOGRAPHY --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"page-bio"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"page-transition hidden max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-2 gap-12 items-center"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">&lt;!-- Custom Queen Crest Display within Biography section --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">img</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"input_file_0.png"</span><span class="s4"> </span><span class="s2">alt</span><span class="s3">=</span><span class="s1">"Hammer to Fall Golden Emblem"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"rounded-xl shadow-2xl border border-queenGold-500/20 w-full h-auto object-cover bg-neutral-900 p-6"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-queenGold-500 text-xs font-bold tracking-widest uppercase block mb-2"</span><span class="s3">&gt;</span><span class="s4">The Production</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl font-extrabold text-white uppercase tracking-widest mb-6"</span><span class="s3">&gt;</span><span class="s4">About The Show</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-neutral-400 font-light space-y-4 text-sm sm:text-base leading-relaxed"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>Based out of Norwich, **Hammer to Fall** is a meticulous, high-energy live tribute dedicated to preserving the sonic accuracy and grand theatre tradition of Queen.<span class="Apple-converted-space"> </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>Focusing heavily on authentic instrument configurations, layered vocal harmonies, and Freddie Mercury’s legendary command of dynamic audiences, our production delivers stadium-level energy tailored perfectly for small theatres and performance clubs.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"border-l-2 border-queenGold-500 pl-4 italic text-neutral-300 my-4"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>"An absolute tour-de-force tracking the live performance legacy of rocks ultimate royalty."</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- SUBPAGE: CONTACT --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"page-contact"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"page-transition hidden max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-12"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-widest"</span><span class="s3">&gt;</span><span class="s4">Booking Inquiries</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mt-4 text-neutral-400 font-light"</span><span class="s3">&gt;</span><span class="s1">Available for venue scheduling, regional promotions, and regional theatre programming loops.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-900 border border-neutral-800 rounded-xl p-8 shadow-2xl"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s1">&lt;!-- Submission Form Layout Area --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">form</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"contact-form"</span><span class="s4"> </span><span class="s2">onsubmit</span><span class="s3">=</span><span class="s1">"handleFormSubmit(event)"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 sm:grid-cols-2 gap-6"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">for</span><span class="s3">=</span><span class="s1">"name"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2"</span><span class="s3">&gt;</span><span class="s4">Your Name / Agency</span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">input</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"name"</span><span class="s4"> </span><span class="s2">required</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-600 focus:outline-none focus:border-queenGold-500 transition text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">for</span><span class="s3">=</span><span class="s1">"email"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2"</span><span class="s3">&gt;</span><span class="s4">Email Address</span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">input</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"email"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"email"</span><span class="s4"> </span><span class="s2">required</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-600 focus:outline-none focus:border-queenGold-500 transition text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">for</span><span class="s3">=</span><span class="s1">"subject"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2"</span><span class="s3">&gt;</span><span class="s4">Booking Nature</span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">select</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"subject"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-neutral-100 focus:outline-none focus:border-queenGold-500 transition text-sm"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"theatre"</span><span class="s3">&gt;</span><span class="s1">Theatre Programming Slot</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"club"</span><span class="s3">&gt;</span><span class="s1">Club / Live Music Venue Booking</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"festival"</span><span class="s3">&gt;</span><span class="s1">Festival / Corporate Event</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">select</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">label</span><span class="s4"> </span><span class="s2">for</span><span class="s3">=</span><span class="s1">"message"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2"</span><span class="s3">&gt;</span><span class="s4">Detailed Message</span><span class="s3">&lt;/</span><span class="s6">label</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">textarea</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"message"</span><span class="s4"> </span><span class="s2">rows</span><span class="s3">=</span><span class="s1">"5"</span><span class="s4"> </span><span class="s2">required</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3 text-neutral-100 placeholder-neutral-600 focus:outline-none focus:border-queenGold-500 transition text-sm"</span><span class="s3">&gt;&lt;/</span><span class="s6">textarea</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"submit"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full py-4 bg-gradient-to-r from-queenGold-400 to-queenGold-500 text-neutral-950 font-bold uppercase tracking-widest text-sm rounded-lg hover:from-yellow-300 hover:to-queenGold-400 transition shadow-lg shadow-queenGold-500/10"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>Submit Venue Inquiry</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">form</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">main</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Footer Area / Social Links Configuration --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">footer</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-neutral-950 border-t border-neutral-900 py-12"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xs text-neutral-600 font-mono tracking-wider"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>&amp;copy; 2026 HAMMER TO FALL. BUILT VIA GITHUB PAGES. ALL RIGHTS RESERVED.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex space-x-6 text-sm font-bold tracking-widest text-neutral-500 uppercase"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Mock Instagram link'); return false;"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Instagram</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Mock YouTube link'); return false;"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">YouTube</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#"</span><span class="s4"> </span><span class="s2">onclick</span><span class="s3">=</span><span class="s1">"triggerNotification('Mock Facebook link'); return false;"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hover:text-queenGold-500 transition"</span><span class="s3">&gt;</span><span class="s4">Facebook</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Core App Router and Interaction Scripts --&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Tab switching SPA router logic</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">function</span><span class="s1"> navigateTo(pageId) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Find all section pages</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> pages = document.querySelectorAll(</span><span class="s8">'.page-transition'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>pages.forEach(page =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>page.classList.add(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>page.style.opacity = </span><span class="s8">'0'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>page.style.transform = </span><span class="s8">'translateY(10px)'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Reveal targeted section page view window</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> activePage = document.getElementById(</span><span class="s8">`page-</span><span class="s1">${pageId}</span><span class="s8">`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">if</span><span class="s1"> (activePage) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>activePage.classList.remove(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>activePage.style.opacity = </span><span class="s8">'1'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>activePage.style.transform = </span><span class="s8">'translateY(0)'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}, </span><span class="s7">50</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Sync visual desktop menu tab indicators</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> tabs = document.querySelectorAll(</span><span class="s8">'.nav-tab'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>tabs.forEach(tab =&gt; tab.classList.remove(</span><span class="s8">'active-tab'</span><span class="s1">));</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> activeTab = document.getElementById(</span><span class="s8">`tab-</span><span class="s1">${pageId}</span><span class="s8">`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">if</span><span class="s1"> (activeTab) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>activeTab.classList.add(</span><span class="s8">'active-tab'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Hide mobile drop-down menu automatically after route select event completes</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById(</span><span class="s8">'mobile-menu'</span><span class="s1">).classList.add(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>window.scrollTo({ top: </span><span class="s7">0</span><span class="s1">, behavior: </span><span class="s8">'smooth'</span><span class="s1"> });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Mobile toggle state controller</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">const</span><span class="s1"> mobileMenuBtn = document.getElementById(</span><span class="s8">'mobile-menu-btn'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">const</span><span class="s1"> mobileMenu = document.getElementById(</span><span class="s8">'mobile-menu'</span><span class="s1">);</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>mobileMenuBtn.addEventListener(</span><span class="s8">'click'</span><span class="s1">, () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>mobileMenu.classList.toggle(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Form processing mockup action handler</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">function</span><span class="s1"> handleFormSubmit(event) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>event.preventDefault();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> name = document.getElementById(</span><span class="s8">'name'</span><span class="s1">).value;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById(</span><span class="s8">'contact-form'</span><span class="s1">).reset();</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">            </span>triggerNotification(</span><span class="s1">`Thank you, </span><span class="s4">${name}</span><span class="s1">! Your theater inquiry has been logged.`</span><span class="s4">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Custom UI alert banner notification trigger</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">function</span><span class="s1"> triggerNotification(text) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> alertBox = document.getElementById(</span><span class="s8">'custom-alert'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">const</span><span class="s1"> alertText = document.getElementById(</span><span class="s8">'alert-text'</span><span class="s1">);</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>alertBox.classList.remove(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>alertBox.classList.add(</span><span class="s8">'flex'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>alertBox.style.opacity = </span><span class="s8">'1'</span><span class="s1">;</span></p>
-<p class="p8"><span class="s11"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>alertBox.style.opacity = </span><span class="s8">'0'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>alertBox.classList.remove(</span><span class="s8">'flex'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>alertBox.classList.add(</span><span class="s8">'hidden'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}, </span><span class="s7">300</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}, </span><span class="s7">3000</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Band Logo -->
+            <div class="flex items-center">
+                <span class="text-2xl font-bold" style="color: var(--queen-gold-500);">HAMMER TO FALL</span>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex gap-8">
+                <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
+                <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
+                <button onclick="navigateTo('tour')" id="tab-tour" class="hover:text-neutral-300 transition">Tour Dates</button>
+                <button onclick="navigateTo('biography')" id="tab-biography" class="hover:text-neutral-300 transition">Biography</button>
+                <button onclick="navigateTo('contact')" id="tab-contact" class="hover:text-neutral-300 transition">Contact</button>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Submenu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
+            <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
+            <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
+            <button onclick="navigateTo('tour')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Tour Dates</button>
+            <button onclick="navigateTo('biography')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Biography</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact</button>
+        </div>
+    </header>
+
+    <!-- Notification Alert Box -->
+    <div id="alert-box" class="hidden fixed top-4 right-4 bg-green-600 px-6 py-3 rounded shadow-lg">
+        <span id="alert-text"></span>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- SUBPAGE: HOME -->
+        <section id="home" class="page-transition">
+            <div class="relative mb-12">
+                <div class="absolute inset-0 blur-3xl opacity-20" style="background: radial-gradient(circle, var(--queen-purple) 0%, transparent 70%)"></div>
+                <div class="relative z-10 text-center mb-12">
+                    <div class="flex justify-center mb-8">
+                        <div class="w-32 h-32 rounded-full border-2" style="border-color: var(--queen-gold-500);">
+                            <img src="https://via.placeholder.com/128" alt="Queen Crest" class="w-full h-full rounded-full">
+                        </div>
+                    </div>
+
+                    <span class="text-neutral-400 uppercase tracking-widest">The Ultimate Queen Tribute Experience</span>
+                    <h1 class="text-5xl md:text-7xl font-bold mt-4 mb-6">
+                        Live Phenomenon <br>
+                        <span style="color: var(--queen-gold-500);">Phenomenon</span>
+                    </h1>
+                    <p class="text-lg text-neutral-300 max-w-2xl mx-auto mb-8">
+                        Bringing the raw power, sweeping dynamic orchestrations, and majestic stage energy of Queen to audiences worldwide.
+                    </p>
+                    <div class="flex gap-4 justify-center flex-wrap">
+                        <button class="px-8 py-3 rounded" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
+                        <button class="px-8 py-3 border-2 rounded" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Book Tickets</button>
+                    </div>
+                </div>
+
+                <!-- Video Player Showcase Section -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold mb-6">
+                        <span style="color: var(--queen-gold-500);">Featured Performance</span>
+                    </h3>
+                    <div class="aspect-video rounded-lg overflow-hidden bg-neutral-800">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Hammer to Fall Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Featured Band Banner -->
+                <div class="mt-12 rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/1200x400" alt="Band Banner" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBPAGE: MUSIC / MEDIA -->
+        <section id="music" class="page-transition hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-4">Music & Media</h2>
+                <p class="text-neutral-400">Explore our latest recordings and performances</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Music Player Integration -->
+                <div class="md:col-span-2">
+                    <div class="bg-neutral-900 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold mb-6">
+                            <span style="color: var(--queen-gold-500);">Featured Tracks</span>
+                        </h3>
+                        
+                        <!-- Track 1 -->
+                        <div class="mb-6">
+                            <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
+                            <div>
+                                <p class="font-semibold">Bohemian Rhapsody</p>
+                                <p class="text-sm text-neutral-400">4:55</p>
+                            </div>
+                        </div>
+
+                        <!-- Track 2 -->
+                        <div class="mb-6">
+                            <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
+                            <div>
+                                <p class="font-semibold">Another One Bites the Dust</p>
+                                <p class="text-sm text-neutral-400">3:36</p>
+                            </div>
+                        </div>
+
+                        <!-- Track 3 -->
+                        <div>
+                            <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
+                            <div>
+                                <p class="font-semibold">We Will Rock You</p>
+                                <p class="text-sm text-neutral-400">3:35</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Albums/Merch Sidebar -->
+                <div>
+                    <div class="bg-neutral-900 rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/300x300" alt="Album Cover" class="w-full">
+                        <div class="p-4">
+                            <h4 class="font-bold mb-2">Live at Wembley</h4>
+                            <p class="text-sm text-neutral-400 mb-4">Recorded Performance</p>
+                            <div class="flex gap-2">
+                                <a href="#" class="flex-1 text-center px-4 py-2 rounded text-sm" style="background-color: var(--queen-gold-500); color: #000;">Listen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBPAGE: TOUR DATES -->
+        <section id="tour" class="page-transition hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-4">Tour Dates</h2>
+                <p class="text-neutral-400">Catch us live across the world</p>
+            </div>
+
+            <!-- Tour Dates Table -->
+            <div class="space-y-4">
+                <!-- Tour Row 1 -->
+                <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="flex-1">
+                        <div class="flex gap-4 mb-2">
+                            <span class="font-bold">January 15, 2026</span>
+                            <span class="text-neutral-400">London, UK</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Royal Albert Hall</h3>
+                            <p class="text-sm text-neutral-400">8:00 PM</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
+                </div>
+
+                <!-- Tour Row 2 -->
+                <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="flex-1">
+                        <div class="flex gap-4 mb-2">
+                            <span class="font-bold">February 22, 2026</span>
+                            <span class="text-neutral-400">Berlin, Germany</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Columbiahalle</h3>
+                            <p class="text-sm text-neutral-400">7:30 PM</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
+                </div>
+
+                <!-- Tour Row 3 -->
+                <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="flex-1">
+                        <div class="flex gap-4 mb-2">
+                            <span class="font-bold">March 18, 2026</span>
+                            <span class="text-neutral-400">New York, USA</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Radio City Music Hall</h3>
+                            <p class="text-sm text-neutral-400">7:00 PM</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBPAGE: BIOGRAPHY -->
+        <section id="biography" class="page-transition hidden">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://via.placeholder.com/400x500" alt="Hammer to Fall" class="rounded-lg w-full">
+                </div>
+                <div>
+                    <span class="text-neutral-400 uppercase tracking-widest" style="color: var(--queen-gold-500);">About Us</span>
+                    <h2 class="text-4xl font-bold mt-4 mb-6">Hammer to Fall</h2>
+                    <div class="space-y-4 text-neutral-300">
+                        <p>
+                            Based out of Norwich, <strong>Hammer to Fall</strong> is a meticulous, high-energy live tribute delivering an authentic reproduction of Queen's legendary catalog and performance style.
+                        </p>
+                        <p>
+                            Focusing heavily on authentic instrument configurations, layered vocal harmonies, and precision stage production, we capture the essence of Queen's raw power and theatrical brilliance.
+                        </p>
+                        <p style="color: var(--queen-gold-500); font-style: italic;">
+                            "An absolute tour-de-force tracking the live performance legacy of rock's ultimate royalty."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBPAGE: CONTACT -->
+        <section id="contact" class="page-transition hidden">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-neutral-400 mb-8">Book us for your event or ask any questions</p>
+
+                <div class="bg-neutral-900 rounded-lg p-8">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block mb-2 font-semibold">Name</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-semibold">Email</label>
+                                <input type="email" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block mb-2 font-semibold">Inquiry Type</label>
+                            <select class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                <option>Select an option</option>
+                                <option>Venue Booking</option>
+                                <option>Private Event</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block mb-2 font-semibold">Message</label>
+                            <textarea class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700 h-32"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="px-8 py-3 rounded font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Submit Venue Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 border-t border-neutral-800 mt-20">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <p class="text-neutral-400 mb-4">
+                &copy; 2026 HAMMER TO FALL. BUILT VIA GITHUB PAGES. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex gap-6 justify-center">
+                <a href="#" class="text-neutral-400 hover:text-neutral-100 transition">Facebook</a>
+                <a href="#" class="text-neutral-400 hover:text-neutral-100 transition">Instagram</a>
+                <a href="#" class="text-neutral-400 hover:text-neutral-100 transition">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core App Scripts -->
+    <script>
+        // Tab switching SPA router logic
+        function navigateTo(pageId) {
+            // Hide all sections
+            const pages = document.querySelectorAll('section');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+                page.style.opacity = '0';
+                page.style.transform = 'translateY(10px)';
+            });
+
+            // Show selected section
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+                setTimeout(() => {
+                    activePage.style.opacity = '1';
+                    activePage.style.transform = 'translateY(0)';
+                }, 50);
+            }
+
+            // Update active tab styling
+            const tabs = document.querySelectorAll('nav button');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+            const activeTab = document.getElementById(`tab-${pageId}`);
+            if (activeTab) {
+                activeTab.classList.add('active-tab');
+            }
+
+            // Hide mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            document.getElementById('contact-form').reset();
+            triggerNotification(`Thank you, ${name}! We'll get back to you soon.`);
+        }
+
+        // Notification system
+        function triggerNotification(text) {
+            const alertBox = document.getElementById('alert-box');
+            const alertText = document.getElementById('alert-text');
+            
+            alertText.textContent = text;
+            alertBox.classList.remove('hidden');
+            alertBox.style.opacity = '1';
+
+            setTimeout(() => {
+                alertBox.style.opacity = '0';
+                setTimeout(() => {
+                    alertBox.classList.add('hidden');
+                }, 300);
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
