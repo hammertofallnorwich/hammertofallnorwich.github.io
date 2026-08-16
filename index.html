@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Ultimate Queen Tribute Experience - Hammer to Fall">
-    <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; img-src 'self' https: data:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com; img-src 'self' https: data:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com;">
     <title>Hammer to Fall - Queen Tribute Band</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <!-- Replace G-XXXXXXXXXX with your real GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Default consent: denied until user makes a choice
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <style>
         :root {
             --queen-gold-400: #f6d365;
@@ -55,6 +75,20 @@
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 inset-x-0 z-[100] bg-neutral-900 border-t border-neutral-700 p-4">
+        <div class="container mx-auto flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+            <p class="text-sm text-neutral-300">
+                We use analytics cookies to understand website traffic and improve your experience.
+            </p>
+            <div class="flex gap-2">
+                <button id="cookie-decline" class="px-4 py-2 rounded border border-neutral-500 text-neutral-200 text-sm">Decline</button>
+                <button id="cookie-accept" class="px-4 py-2 rounded text-sm font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Accept analytics</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header / Navigation Bar -->
     <header class="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -107,7 +141,6 @@
                     <div class="flex justify-center mb-8">
                         <div class="w-32 h-32 rounded-full border-2" style="border-color: var(--queen-gold-500);">
                             <img src="input_file_0.png" alt="Queen Crest" class="w-full h-full rounded-full">
-                                 <!-- <img src="" alt="Queen Crest" class="w-full h-full rounded-full"> -->
                         </div>
                     </div>
 
@@ -131,18 +164,16 @@
                         <span style="color: var(--queen-gold-500);">Featured Performance</span>
                     </h3>
                     <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/QdmP47O5CYQ" title="Hammer to Fall Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube-nocookie.com/embed/QdmP47O5CYQ" title="Hammer to Fall Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                
-                    <!-- Featured Band Banner -->
+                <!-- Featured Band Banner -->
                 <div class="mt-12 rounded-lg overflow-hidden">
                     <img src="input_file_0.png" alt="Band Banner" class="w-full h-auto">
                 </div>
             </div>
         </section>
-      
 
         <!-- SUBPAGE: MUSIC / MEDIA -->
         <section id="music" class="page-transition hidden">
@@ -260,9 +291,7 @@
             </div>
         </section>
 
-
-
-         <!-- SUBPAGE: BIOGRAPHY -->
+        <!-- SUBPAGE: BIOGRAPHY -->
         <section id="biography" class="page-transition hidden">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -273,8 +302,8 @@
                     <h2 class="text-4xl font-bold mt-4 mb-6">Hammer to Fall</h2>
                     <div class="space-y-4 text-neutral-300">
                         <p>
-                            Based out of Norwich, <strong>Hammer to Fall</strong> brings the unmistakable sound and spirit of Queen to the stage with powerful vocals, authentic guitar tones, and the energy of a true stadium show.  
-                       </p>
+                            Based out of Norwich, <strong>Hammer to Fall</strong> brings the unmistakable sound and spirit of Queen to the stage with powerful vocals, authentic guitar tones, and the energy of a true live celebration.
+                        </p>
                         <p>
                             Featuring all the hits, thrilling musicianship, and the musical detail fans love.
                         </p>
@@ -411,6 +440,57 @@
                 }, 300);
             }, 3000);
         }
+
+        // Cookie consent logic
+        (function () {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const declineBtn = document.getElementById('cookie-decline');
+            const key = 'htf_cookie_consent';
+
+            function hideBanner() {
+                banner.classList.add('hidden');
+            }
+
+            function showBanner() {
+                banner.classList.remove('hidden');
+            }
+
+            function setConsent(granted) {
+                gtag('consent', 'update', {
+                    analytics_storage: granted ? 'granted' : 'denied',
+                    ad_storage: 'denied',
+                    ad_user_data: 'denied',
+                    ad_personalization: 'denied'
+                });
+            }
+
+            const saved = localStorage.getItem(key);
+
+            if (saved === 'accepted') {
+                setConsent(true);
+                hideBanner();
+            } else if (saved === 'declined') {
+                setConsent(false);
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem(key, 'accepted');
+                setConsent(true);
+                hideBanner();
+                triggerNotification("Thanks! Analytics consent accepted.");
+            });
+
+            declineBtn.addEventListener('click', () => {
+                localStorage.setItem(key, 'declined');
+                setConsent(false);
+                hideBanner();
+                triggerNotification("No problem — analytics disabled.");
+            });
+        })();
     </script>
 </body>
 </html>
