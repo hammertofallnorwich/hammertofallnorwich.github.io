@@ -14,19 +14,23 @@
             --queen-gold-600: #aa8c2c;
             --queen-purple: #2d1b4e;
         }
-
-        html { scroll-behavior: smooth; }
-
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         .page-transition {
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-
+        
         .active-tab {
             border-bottom: 2px solid var(--queen-gold-500);
             color: var(--queen-gold-500);
         }
-
-        .hidden { display: none; }
+        
+        .hidden {
+            display: none;
+        }
 
         .video-container {
             position: relative;
@@ -47,6 +51,14 @@
             border: none;
             border-radius: 0.5rem;
             pointer-events: auto;
+        }
+
+        .metallic-gold {
+            background: linear-gradient(180deg, #fff4c2 0%, #f6d365 22%, #d4af37 50%, #aa8c2c 78%, #fff0b0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.25), 0 2px 8px rgba(212,175,55,0.25);
         }
     </style>
 </head>
@@ -97,7 +109,7 @@
                         The Ultimate Queen Tribute Experience
                     </span>
 
-                    <h1 class="text-5xl md:text-7xl font-black mt-2 mb-4 leading-tight" style="color: var(--queen-gold-500);">
+                    <h1 class="text-6xl md:text-8xl font-black mt-2 mb-4 leading-tight metallic-gold">
                         HAMMER TO FALL
                     </h1>
 
