@@ -51,10 +51,11 @@
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
-    <header class="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-800">
+    <header class="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur border-b border-neutral-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <span class="text-2xl font-bold" style="color: var(--queen-gold-500);">HAMMER TO FALL</span>
+            <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full" style="background-color: var(--queen-gold-500);"></div>
+                <span class="text-2xl font-bold tracking-wider" style="color: var(--queen-gold-500);">HAMMER TO FALL</span>
             </div>
 
             <nav class="hidden md:flex gap-8">
@@ -87,65 +88,72 @@
 
     <main class="container mx-auto px-4 py-12">
         <section id="home" class="page-transition">
-            <div class="relative mb-12">
-                <div class="absolute inset-0 blur-3xl opacity-20" style="background: radial-gradient(circle, var(--queen-purple) 0%, transparent 70%)"></div>
-                <div class="relative z-10 text-center mb-12">
-                    <span class="text-neutral-400 uppercase tracking-widest">The Ultimate Queen Tribute Experience</span>
-                    <h1 class="text-5xl md:text-7xl font-bold mt-4 mb-6">
+            <div class="relative overflow-hidden rounded-3xl border border-neutral-800 bg-gradient-to-b from-neutral-900 to-neutral-950 mb-12">
+                <div class="absolute inset-0 blur-3xl opacity-25" style="background: radial-gradient(circle at top, var(--queen-purple) 0%, transparent 65%)"></div>
+                <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.6))]"></div>
+
+                <div class="relative z-10 px-6 py-20 md:px-16 md:py-28 text-center">
+                    <span class="inline-block mb-6 px-4 py-2 rounded-full border border-neutral-700 bg-neutral-950/70 text-neutral-300 uppercase tracking-[0.35em] text-xs">
+                        The Ultimate Queen Tribute Experience
+                    </span>
+
+                    <h1 class="text-5xl md:text-7xl font-black mt-2 mb-6 leading-tight">
                         The Legend Reborn <br>
                         <span style="color: var(--queen-gold-500);">Hammer To Fall</span>
                     </h1>
-                    <p class="text-lg text-neutral-300 max-w-2xl mx-auto mb-8">
-                        From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty. More than a band, they are a spectacle: a full-throttle celebration of Queen, delivered with stadium-sized energy and meticulous musical devotion.
+
+                    <p class="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                        From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty.
                     </p>
-                    <div class="flex gap-4 justify-center flex-wrap">
-                        <button onclick="document.getElementById('featured-performance').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
-                        <button onclick="navigateTo('tour')" class="px-8 py-3 border-2 rounded" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">See Gig Dates</button>
-                    </div>
-                </div>
 
-                <div class="grid md:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
-                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Queen energy</p>
-                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Stadium-scale</p>
+                    <div class="flex gap-4 justify-center flex-wrap mb-10">
+                        <button onclick="document.getElementById('featured-performance').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
+                        <button onclick="navigateTo('tour')" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">See Gig Dates</button>
                     </div>
-                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
-                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Based in</p>
-                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Norwich, Norfolk</p>
-                    </div>
-                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
-                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Book for</p>
-                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Venues & events</p>
-                    </div>
-                </div>
 
-                <div class="grid md:grid-cols-2 gap-8 mb-12 items-start">
-                    <div class="bg-neutral-900 rounded-lg p-8 border border-neutral-800">
-                        <span class="text-neutral-400 uppercase tracking-widest" style="color: var(--queen-gold-500);">About Us</span>
-                        <h2 class="text-3xl font-bold mt-4 mb-6">Hammer to Fall</h2>
-                        <div class="space-y-4 text-neutral-300 leading-relaxed">
-                            <p>
-                                <strong>The Legend Reborn.</strong> From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty.
-                            </p>
-                            <p>
-                                More than a band, Hammer to Fall are a spectacle — a full-throttle celebration of Queen, delivered with stadium-sized energy and meticulous musical devotion.
-                            </p>
-                            <p>
-                                <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of “Prince Ali” on ITV’s The Voice UK 2018 introduced his fearless theatricality to audiences across the nation.
-                            </p>
-                            <p>
-                                Chris brings a vocal presence that doesn’t simply echo Freddie’s spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
-                            </p>
-                            <p style="color: var(--queen-gold-500); font-style: italic;">
-                                Together, the band transforms every venue into a night of pure Queen magic.
-                            </p>
+                    <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                        <div class="bg-black/35 backdrop-blur rounded-2xl p-6 border border-neutral-800">
+                            <p class="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">Queen energy</p>
+                            <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Stadium-scale</p>
+                        </div>
+                        <div class="bg-black/35 backdrop-blur rounded-2xl p-6 border border-neutral-800">
+                            <p class="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">Based in</p>
+                            <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Norwich, Norfolk</p>
+                        </div>
+                        <div class="bg-black/35 backdrop-blur rounded-2xl p-6 border border-neutral-800">
+                            <p class="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-2">Book for</p>
+                            <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Venues & events</p>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="bg-neutral-900 rounded-lg p-8 border border-neutral-800">
-                        <h3 class="text-2xl font-bold mb-4">
-                            <span style="color: var(--queen-gold-500);">Why book Hammer to Fall?</span>
-                        </h3>
+            <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 mb-12 items-start">
+                <div class="bg-neutral-900 rounded-3xl p-8 md:p-10 border border-neutral-800 shadow-2xl shadow-black/20">
+                    <span class="text-neutral-400 uppercase tracking-[0.3em] text-xs" style="color: var(--queen-gold-500);">About Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">A voice fit for royalty</h2>
+                    <div class="space-y-5 text-neutral-300 leading-relaxed text-lg">
+                        <p>
+                            <strong>The Legend Reborn.</strong> From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty.
+                        </p>
+                        <p>
+                            More than a band, Hammer to Fall are a spectacle — a full-throttle celebration of Queen, delivered with stadium-sized energy and meticulous musical devotion.
+                        </p>
+                        <p>
+                            <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of “Prince Ali” on ITV’s The Voice UK 2018 introduced his fearless theatricality to audiences across the nation.
+                        </p>
+                        <p>
+                            Chris brings a vocal presence that doesn’t simply echo Freddie’s spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
+                        </p>
+                        <p style="color: var(--queen-gold-500); font-style: italic;">
+                            Together, the band transforms every venue into a night of pure Queen magic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--queen-gold-500);">Why book Hammer to Fall?</h3>
                         <ul class="space-y-3 text-neutral-300 list-disc list-inside">
                             <li>Authentic Queen sound and energy</li>
                             <li>Powerful live vocals and musicianship</li>
@@ -153,15 +161,24 @@
                             <li>Ideal for theatres, festivals, and private events</li>
                         </ul>
                     </div>
-                </div>
 
-                <div id="featured-performance" class="mt-12">
-                    <h3 class="text-2xl font-bold mb-6">
-                        <span style="color: var(--queen-gold-500);">Featured Performance</span>
-                    </h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube-nocookie.com/embed/QdmP47O5CYQ" title="Hammer to Fall Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800">
+                        <h3 class="text-xl font-bold mb-4">Quick booking info</h3>
+                        <div class="space-y-3 text-neutral-300">
+                            <div class="flex justify-between gap-4"><span class="text-neutral-500">Location</span><span>Norwich, UK</span></div>
+                            <div class="flex justify-between gap-4"><span class="text-neutral-500">Style</span><span>Queen Tribute</span></div>
+                            <div class="flex justify-between gap-4"><span class="text-neutral-500">Available for</span><span>Gigs & events</span></div>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="featured-performance" class="mt-12">
+                <h3 class="text-2xl font-bold mb-6">
+                    <span style="color: var(--queen-gold-500);">Featured Performance</span>
+                </h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/QdmP47O5CYQ" title="Hammer to Fall Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
