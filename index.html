@@ -14,23 +14,19 @@
             --queen-gold-600: #aa8c2c;
             --queen-purple: #2d1b4e;
         }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
+        html { scroll-behavior: smooth; }
+
         .page-transition {
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-        
+
         .active-tab {
             border-bottom: 2px solid var(--queen-gold-500);
             color: var(--queen-gold-500);
         }
-        
-        .hidden {
-            display: none;
-        }
+
+        .hidden { display: none; }
 
         .video-container {
             position: relative;
@@ -55,15 +51,12 @@
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
-    <!-- Header / Navigation Bar -->
     <header class="sticky top-0 z-50 bg-neutral-950 border-b border-neutral-800">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Band Logo -->
             <div class="flex items-center">
                 <span class="text-2xl font-bold" style="color: var(--queen-gold-500);">HAMMER TO FALL</span>
             </div>
 
-            <!-- Desktop Navigation Menu -->
             <nav class="hidden md:flex gap-8">
                 <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
                 <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
@@ -72,7 +65,6 @@
                 <button onclick="navigateTo('contact')" id="tab-contact" class="hover:text-neutral-300 transition">Contact</button>
             </nav>
 
-            <!-- Mobile Navigation Toggle -->
             <div class="md:hidden">
                 <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -82,7 +74,6 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Submenu -->
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
             <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
             <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
@@ -92,14 +83,11 @@
         </div>
     </header>
 
-    <!-- Notification Alert Box -->
     <div id="alert-box" class="hidden fixed top-4 right-4 bg-green-600 px-6 py-3 rounded shadow-lg">
         <span id="alert-text"></span>
     </div>
 
-    <!-- Main Content Area -->
     <main class="container mx-auto px-4 py-12">
-        <!-- SUBPAGE: HOME -->
         <section id="home" class="page-transition">
             <div class="relative mb-12">
                 <div class="absolute inset-0 blur-3xl opacity-20" style="background: radial-gradient(circle, var(--queen-purple) 0%, transparent 70%)"></div>
@@ -113,13 +101,27 @@
                         Bringing the raw power, sweeping dynamic orchestrations, and majestic stage energy of Queen to audiences across East Anglia and beyond.
                     </p>
                     <div class="flex gap-4 justify-center flex-wrap">
-                        <button class="px-8 py-3 rounded" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
-                        <button class="px-8 py-3 border-2 rounded" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Book Tickets</button>
+                        <button onclick="document.getElementById('featured-performance').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
+                        <button onclick="navigateTo('tour')" class="px-8 py-3 border-2 rounded" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">See Gig Dates</button>
                     </div>
                 </div>
 
-                <!-- Video Player Showcase Section -->
-                <div class="mt-12">
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
+                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Queen energy</p>
+                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Stadium-scale</p>
+                    </div>
+                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
+                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Based in</p>
+                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Norwich, Norfolk</p>
+                    </div>
+                    <div class="bg-neutral-900 rounded-lg p-6 text-center border border-neutral-800">
+                        <p class="text-sm uppercase tracking-widest text-neutral-400 mb-2">Book for</p>
+                        <p class="text-2xl font-bold" style="color: var(--queen-gold-500);">Venues & events</p>
+                    </div>
+                </div>
+
+                <div id="featured-performance" class="mt-12">
                     <h3 class="text-2xl font-bold mb-6">
                         <span style="color: var(--queen-gold-500);">Featured Performance</span>
                     </h3>
@@ -129,9 +131,7 @@
                 </div>
             </div>
         </section>
-      
 
-        <!-- SUBPAGE: MUSIC / MEDIA -->
         <section id="music" class="page-transition hidden">
             <div class="mb-12">
                 <h2 class="text-4xl font-bold mb-4">Music & Media</h2>
@@ -139,14 +139,12 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Music Player Integration -->
                 <div class="md:col-span-2">
                     <div class="bg-neutral-900 rounded-lg p-6">
                         <h3 class="text-2xl font-bold mb-6">
                             <span style="color: var(--queen-gold-500);">Featured Tracks</span>
                         </h3>
-                        
-                        <!-- Track 1 -->
+
                         <div class="mb-6">
                             <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
                             <div>
@@ -155,7 +153,6 @@
                             </div>
                         </div>
 
-                        <!-- Track 2 -->
                         <div class="mb-6">
                             <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
                             <div>
@@ -164,7 +161,6 @@
                             </div>
                         </div>
 
-                        <!-- Track 3 -->
                         <div>
                             <button class="mb-4 px-4 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">▶ Play</button>
                             <div>
@@ -175,7 +171,6 @@
                     </div>
                 </div>
 
-                <!-- Albums/Merch Sidebar -->
                 <div>
                     <div class="bg-neutral-900 rounded-lg overflow-hidden">
                         <img src="https://via.placeholder.com/300x300" alt="Album Cover" class="w-full">
@@ -191,16 +186,13 @@
             </div>
         </section>
 
-        <!-- SUBPAGE: TOUR DATES -->
         <section id="tour" class="page-transition hidden">
             <div class="mb-12">
                 <h2 class="text-4xl font-bold mb-4">Gig Dates</h2>
                 <p class="text-neutral-400">Catch us live across the UK</p>
             </div>
 
-            <!-- Tour Dates Table -->
             <div class="space-y-4">
-                <!-- Tour Row 1 -->
                 <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
                     <div class="flex-1">
                         <div class="flex gap-4 mb-2">
@@ -215,7 +207,6 @@
                     <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
                 </div>
 
-                <!-- Tour Row 2 -->
                 <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
                     <div class="flex-1">
                         <div class="flex gap-4 mb-2">
@@ -229,28 +220,9 @@
                     </div>
                     <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
                 </div>
-            </section>
-
-                <!-- Tour Row 3 -->
-                <!-- <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div class="flex-1">
-                        <div class="flex gap-4 mb-2">
-                            <span class="font-bold">March 18, 2026</span>
-                            <span class="text-neutral-400">New York, USA</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg">Radio City Music Hall</h3>
-                            <p class="text-sm text-neutral-400">7:00 PM</p>
-                        </div>
-                    </div>
-                    <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">Tickets</button>
-                </div>
             </div>
-        </section> -->
+        </section>
 
-
-
-         <!-- SUBPAGE: BIOGRAPHY -->
         <section id="biography" class="page-transition hidden">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -261,10 +233,16 @@
                     <h2 class="text-4xl font-bold mt-4 mb-6">Hammer to Fall</h2>
                     <div class="space-y-4 text-neutral-300">
                         <p>
-                            Based out of Norwich, <strong>Hammer to Fall</strong> brings the unmistakable sound and spirit of Queen to the stage with powerful vocals, authentic guitar tones, and the e[...]
-                       </p>
+                            <strong>He Legend Reborn.</strong> From the heart of Norwich’s vibrant music scene rises Hammer to Fall, a tribute forged in the fire, glamour, and operatic majesty of Queen.
+                        </p>
                         <p>
-                            Featuring all the hits, thrilling musicianship, and the musical detail fans love.
+                            More than a band, Hammer to Fall are a spectacle — a royal celebration of rock’s greatest dynasty, delivered with stadium-sized energy and meticulous musical devotion.
+                        </p>
+                        <p>
+                            <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of “Prince Ali” on ITV’s The Voice UK 2018 introduced his fearless theatricality to audiences across the nation.
+                        </p>
+                        <p>
+                            Chris brings a vocal presence that doesn’t just echo Freddie’s spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
                         </p>
                         <p style="color: var(--queen-gold-500); font-style: italic;">
                             "An absolute tour-de-force tracking the live performance legacy of rock's ultimate royalty."
@@ -274,7 +252,6 @@
             </div>
         </section>
 
-        <!-- SUBPAGE: CONTACT -->
         <section id="contact" class="page-transition hidden">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
@@ -317,15 +294,14 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-neutral-900 border-t border-neutral-800 mt-20">
         <div class="container mx-auto px-4 py-8 text-center">
             <p class="text-neutral-400 mb-4">
                 &copy; 2026 HAMMER TO FALL. BUILT VIA GITHUB PAGES. ALL RIGHTS RESERVED.
             </p>
-          <div class="mt-6 text-neutral-400 text-center">
-    <span id="visitor-count" class="font-semibold" style="color: var(--queen-gold-500);"></span>
-</div>
+            <div class="mt-6 text-neutral-400 text-center">
+                <span id="visitor-count" class="font-semibold" style="color: var(--queen-gold-500);"></span>
+            </div>
             <div class="flex gap-6 justify-center">
                 <a href="https://www.facebook.com/Hammertofallnorwich/" class="text-neutral-400 hover:text-neutral-100 transition">Facebook</a>
                 <a href="https://www.instagram.com/hammer2fall_nch?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-neutral-400 hover:text-neutral-100 transition">Instagram</a>
@@ -334,11 +310,8 @@
         </div>
     </footer>
 
-    <!-- Core App Scripts -->
     <script>
-        // Tab switching SPA router logic
         function navigateTo(pageId) {
-            // Hide all sections
             const pages = document.querySelectorAll('section');
             pages.forEach(page => {
                 page.classList.add('hidden');
@@ -346,7 +319,6 @@
                 page.style.transform = 'translateY(10px)';
             });
 
-            // Show selected section
             const activePage = document.getElementById(pageId);
             if (activePage) {
                 activePage.classList.remove('hidden');
@@ -356,7 +328,6 @@
                 }, 50);
             }
 
-            // Update active tab styling
             const tabs = document.querySelectorAll('nav button');
             tabs.forEach(tab => tab.classList.remove('active-tab'));
 
@@ -365,12 +336,10 @@
                 activeTab.classList.add('active-tab');
             }
 
-            // Hide mobile menu
             document.getElementById('mobile-menu').classList.add('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -378,19 +347,17 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form submission handler
         function handleFormSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('contact-name').value;
             document.getElementById('contact-form').reset();
-            triggerNotification(`Thank you, ${name}! We'll get back to soon.`);
+            triggerNotification(`Thank you, ${name}! We'll get back to you soon.`);
         }
 
-        // Notification system
         function triggerNotification(text) {
             const alertBox = document.getElementById('alert-box');
             const alertText = document.getElementById('alert-text');
-            
+
             alertText.textContent = text;
             alertBox.classList.remove('hidden');
             alertBox.style.opacity = '1';
