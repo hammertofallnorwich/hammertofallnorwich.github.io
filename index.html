@@ -353,16 +353,17 @@
                 return;
             }
 
-            if (hero.dataset.parallaxInitialized === 'true') {
-                return;
-            }
-
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                hero.style.backgroundPosition = 'center center';
-                return;
+            if (typeof window.__homeHeroParallaxCleanup === 'function') {
+                window.__homeHeroParallaxCleanup();
             }
 
             hero.dataset.parallaxInitialized = 'true';
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                hero.style.backgroundPosition = 'center center';
+                window.__homeHeroParallaxCleanup = null;
+                return;
+            }
 
             let ticking = false;
 
@@ -387,6 +388,10 @@
 
             window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
             window.addEventListener('resize', requestParallaxUpdate);
+            window.__homeHeroParallaxCleanup = function cleanupHeroParallax() {
+                window.removeEventListener('scroll', requestParallaxUpdate);
+                window.removeEventListener('resize', requestParallaxUpdate);
+            };
             requestParallaxUpdate();
         })();
 
