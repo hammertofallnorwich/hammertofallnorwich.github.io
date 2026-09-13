@@ -52,6 +52,22 @@
             border-radius: 0.5rem;
             pointer-events: auto;
         }
+
+        .hero-bg {
+            background-image:
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.68)),
+                url('./input_file_0.png');
+            background-size: cover;
+            background-position: center 0px;
+            background-repeat: no-repeat;
+            will-change: background-position;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg {
+                background-position: center center;
+            }
+        }
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
@@ -92,9 +108,8 @@
 
     <main class="container mx-auto px-4 py-12">
         <section id="home" class="page-transition">
-            <div class="relative overflow-hidden rounded-3xl border border-neutral-800 bg-gradient-to-b from-neutral-900 to-neutral-950 mb-12">
+            <div id="home-hero" class="hero-bg relative overflow-hidden rounded-3xl border border-neutral-800 mb-12">
                 <div class="absolute inset-0 blur-3xl opacity-25" style="background: radial-gradient(circle at top, var(--queen-purple) 0%, transparent 65%)"></div>
-                <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.6))]"></div>
 
                 <div class="relative z-10 px-6 py-14 md:px-16 md:py-16 text-center">
                     <span class="inline-block mb-4 px-4 py-2 rounded-full border border-neutral-700 bg-neutral-950/70 text-neutral-300 uppercase tracking-[0.35em] text-xs">
@@ -330,6 +345,48 @@
             document.getElementById('mobile-menu').classList.add('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        (function initHeroParallax() {
+            const hero = document.getElementById('home-hero');
+
+            if (!hero) {
+                return;
+            }
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                hero.style.backgroundPosition = 'center center';
+                return;
+            }
+
+            let ticking = false;
+
+            function updateParallax() {
+                ticking = false;
+
+                const rect = hero.getBoundingClientRect();
+                const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                if (rect.bottom < 0 || rect.top > viewportHeight) {
+                    return;
+                }
+
+                const offset = Math.round(rect.top * -0.08);
+                hero.style.backgroundPosition = `center ${offset}px`;
+            }
+
+            function requestParallaxUpdate() {
+                if (ticking) {
+                    return;
+                }
+
+                ticking = true;
+                window.requestAnimationFrame(updateParallax);
+            }
+
+            window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+            window.addEventListener('resize', requestParallaxUpdate);
+            requestParallaxUpdate();
+        })();
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
