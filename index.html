@@ -353,8 +353,8 @@
                 return;
             }
 
-            if (typeof window.__homeHeroParallaxCleanup === 'function') {
-                window.__homeHeroParallaxCleanup();
+            if (typeof hero.__parallaxCleanup === 'function') {
+                hero.__parallaxCleanup();
             }
 
             hero.dataset.parallaxInitialized = 'true';
@@ -409,7 +409,7 @@
                 reducedMotionQuery.addListener(handleReducedMotionChange);
             }
 
-            window.__homeHeroParallaxCleanup = function cleanupHeroParallax() {
+            hero.__parallaxCleanup = function cleanupHeroParallax() {
                 removeParallaxListeners();
 
                 if (typeof reducedMotionQuery.removeEventListener === 'function') {
