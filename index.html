@@ -347,14 +347,20 @@
         }
 
         (function initHeroParallax() {
+            const cleanupMapKey = Symbol.for('homeHeroParallaxCleanupMap');
+            const heroParallaxCleanupMap = window[cleanupMapKey] || new WeakMap();
             const hero = document.getElementById('home-hero');
 
             if (!hero) {
                 return;
             }
 
-            if (typeof hero.__parallaxCleanup === 'function') {
-                hero.__parallaxCleanup();
+            window[cleanupMapKey] = heroParallaxCleanupMap;
+
+            const existingCleanup = heroParallaxCleanupMap.get(hero);
+
+            if (typeof existingCleanup === 'function') {
+                existingCleanup();
             }
 
             hero.dataset.parallaxInitialized = 'true';
@@ -409,7 +415,7 @@
                 reducedMotionQuery.addListener(handleReducedMotionChange);
             }
 
-            hero.__parallaxCleanup = function cleanupHeroParallax() {
+            heroParallaxCleanupMap.set(hero, function cleanupHeroParallax() {
                 removeParallaxListeners();
 
                 if (typeof reducedMotionQuery.removeEventListener === 'function') {
@@ -417,7 +423,8 @@
                 } else {
                     reducedMotionQuery.removeListener(handleReducedMotionChange);
                 }
-            };
+                heroParallaxCleanupMap.delete(hero);
+            });
 
             if (reducedMotionQuery.matches) {
                 hero.style.backgroundPosition = 'center center';
