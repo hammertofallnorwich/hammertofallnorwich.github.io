@@ -353,10 +353,16 @@
                 return;
             }
 
+            if (hero.dataset.parallaxInitialized === 'true') {
+                return;
+            }
+
             if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
                 hero.style.backgroundPosition = 'center center';
                 return;
             }
+
+            hero.dataset.parallaxInitialized = 'true';
 
             let ticking = false;
 
