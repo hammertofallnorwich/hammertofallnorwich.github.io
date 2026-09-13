@@ -358,12 +358,7 @@
             }
 
             hero.dataset.parallaxInitialized = 'true';
-
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                hero.style.backgroundPosition = 'center center';
-                window.__homeHeroParallaxCleanup = null;
-                return;
-            }
+            const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
             let ticking = false;
 
@@ -386,13 +381,50 @@
                 window.requestAnimationFrame(updateParallax);
             }
 
-            window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
-            window.addEventListener('resize', requestParallaxUpdate);
-            window.__homeHeroParallaxCleanup = function cleanupHeroParallax() {
+            function removeParallaxListeners() {
                 window.removeEventListener('scroll', requestParallaxUpdate);
                 window.removeEventListener('resize', requestParallaxUpdate);
+            }
+
+            function enableParallax() {
+                removeParallaxListeners();
+                window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+                window.addEventListener('resize', requestParallaxUpdate);
+                requestParallaxUpdate();
+            }
+
+            function handleReducedMotionChange(event) {
+                if (event.matches) {
+                    removeParallaxListeners();
+                    hero.style.backgroundPosition = 'center center';
+                    return;
+                }
+
+                enableParallax();
+            }
+
+            if (typeof reducedMotionQuery.addEventListener === 'function') {
+                reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
+            } else {
+                reducedMotionQuery.addListener(handleReducedMotionChange);
+            }
+
+            window.__homeHeroParallaxCleanup = function cleanupHeroParallax() {
+                removeParallaxListeners();
+
+                if (typeof reducedMotionQuery.removeEventListener === 'function') {
+                    reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+                } else {
+                    reducedMotionQuery.removeListener(handleReducedMotionChange);
+                }
             };
-            requestParallaxUpdate();
+
+            if (reducedMotionQuery.matches) {
+                hero.style.backgroundPosition = 'center center';
+                return;
+            }
+
+            enableParallax();
         })();
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
