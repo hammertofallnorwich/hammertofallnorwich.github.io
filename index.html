@@ -56,11 +56,12 @@
         .hero-bg {
             background-image:
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.68)),
-                url('./input_file_0.png');
-            background-size: cover;
-            background-position: center 0px;
+                url('./input_file_1.png');
+            background-size: contain;
+            background-position: center center;
             background-repeat: no-repeat;
             will-change: background-position;
+            min-height: 400px;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -121,12 +122,12 @@
                     </h1>
 
                     <p class="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty.
+                        From the heart of Norwich's vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock's greatest dynasty.
                     </p>
 
                     <div class="flex gap-4 justify-center flex-wrap">
-                        <button onclick="document.getElementById('featured-performance').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition" style="background-color: var(--queen-gold-500); color: #000;">Watch Showreel</button>
-                        <button onclick="navigateTo('tour')" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">See Gig Dates</button>
+                        <button onclick="document.getElementById('featured-performance').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition" style="background-color: var(--queen-gold-500); color: #000;">Watch Performance</button>
+                        <button onclick="navigateTo('tour')" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Tour Dates</button>
                     </div>
                 </div>
             </div>
@@ -136,16 +137,16 @@
                 <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">A voice fit for royalty</h2>
                 <div class="space-y-5 text-neutral-300 leading-relaxed text-lg">
                     <p>
-                        <strong>The Legend Reborn.</strong> From the heart of Norwich’s vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock’s greatest dynasty.
+                        <strong>The Legend Reborn.</strong> From the heart of Norwich's vibrant music scene rises Hammer to Fall — a Queen tribute forged in the fire, glamour, and operatic majesty of rock's greatest dynasty.
                     </p>
                     <p>
                         More than a band, Hammer to Fall are a spectacle — a full-throttle celebration of Queen, delivered with stadium-sized energy and meticulous musical devotion.
                     </p>
                     <p>
-                        <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of “Prince Ali” on ITV’s The Voice UK 2018 introduced his fearless theatricality to audiences across the nation.
+                        <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of "Prince Ali" on ITV's The Voice UK 2020 captivated millions and left Meghan Trainor starstruck.
                     </p>
                     <p>
-                        Chris brings a vocal presence that doesn’t simply echo Freddie’s spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
+                        Chris brings a vocal presence that doesn't simply echo Freddie's spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
                     </p>
                     <p style="color: var(--queen-gold-500); font-style: italic;">
                         Together, the band transforms every venue into a night of pure Queen magic.
