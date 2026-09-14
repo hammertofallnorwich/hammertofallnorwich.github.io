@@ -82,7 +82,6 @@
             <nav class="hidden md:flex gap-8">
                 <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
                 <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
-                <button onclick="navigateTo('tour')" id="tab-tour" class="hover:text-neutral-300 transition">Gig Dates</button>
                 <button onclick="navigateTo('contact')" id="tab-contact" class="hover:text-neutral-300 transition">Contact Us</button>
             </nav>
 
@@ -98,7 +97,6 @@
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
             <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
             <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
-            <button onclick="navigateTo('tour')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Gig Dates</button>
             <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact Us</button>
         </div>
     </header>
@@ -122,8 +120,8 @@
                     </p>
 
                     <div class="flex gap-4 justify-center flex-wrap">
-                        <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition" style="background-color: var(--queen-gold-500); color: #000;">Watch Promo</button>
-                        <button onclick="navigateTo('tour')" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Gig Dates</button>
+                        <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Watch Promo</button>
+                        <button onclick="document.getElementById('home-gig-dates').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Gig Dates</button>
                     </div>
                 </div>
             </div>
@@ -160,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="mt-14">
+            <div id="home-gig-dates" class="mt-14">
                 <h3 class="text-2xl font-bold mb-6 text-center">
                     <span style="color: var(--queen-gold-500);">Upcoming Gig Dates</span>
                 </h3>
