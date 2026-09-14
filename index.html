@@ -115,7 +115,6 @@
             <nav class="hidden md:flex gap-8">
                 <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
                 <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
-                <button onclick="navigateTo('contact')" id="tab-contact" class="hover:text-neutral-300 transition">Contact Us</button>
             </nav>
 
             <div class="md:hidden">
@@ -130,7 +129,6 @@
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
             <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
             <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
-            <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact Us</button>
         </div>
     </header>
 
@@ -231,6 +229,66 @@
                 </div>
             </div>
 
+            <div id="home-contact" class="mt-14">
+                <h3 class="text-2xl font-bold mb-6 text-center">
+                    <span style="color: var(--queen-gold-500);">Get in Touch</span>
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-neutral-900 rounded-lg p-6">
+                        <h4 class="font-semibold mb-4">Book us for your event</h4>
+                        <p class="text-neutral-400 text-sm mb-6">Fill out the form and we'll get back to you soon with availability and pricing.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="contact-name" class="block mb-2 font-semibold text-sm">Name</label>
+                                    <input type="text" id="contact-name" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="block mb-2 font-semibold text-sm">Email</label>
+                                    <input type="email" id="contact-email" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="contact-inquiry-type" class="block mb-2 font-semibold text-sm">Inquiry Type</label>
+                                <select id="contact-inquiry-type" class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                    <option>Select an option</option>
+                                    <option>Venue Booking</option>
+                                    <option>Private Event</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block mb-2 font-semibold text-sm">Message</label>
+                                <textarea id="contact-message" class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700 h-32"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-3 rounded font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Submit Inquiry</button>
+                        </form>
+                    </div>
+
+                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col justify-center">
+                        <h4 class="font-semibold mb-2" style="color: var(--queen-gold-500);">Follow Us</h4>
+                        <p class="text-neutral-400 text-sm mb-6">Stay updated on our latest performances and announcements.</p>
+
+                        <div class="space-y-3">
+                            <a href="https://www.facebook.com/Hammertofallnorwich/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 px-4 py-3 transition hover:bg-neutral-800">
+                                <span class="font-semibold" style="color: var(--queen-gold-500);">Facebook</span>
+                                <span class="text-sm text-neutral-400">Follow the band</span>
+                            </a>
+                            <a href="https://www.instagram.com/hammer2fall_nch?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 px-4 py-3 transition hover:bg-neutral-800">
+                                <span class="font-semibold" style="color: var(--queen-gold-500);">Instagram</span>
+                                <span class="text-sm text-neutral-400">See the latest updates</span>
+                            </a>
+                            <a href="https://youtube.com/@hammertofallnorwich?si=UJ57kttmZryOTNW1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between rounded-lg border border-neutral-800 px-4 py-3 transition hover:bg-neutral-800">
+                                <span class="font-semibold" style="color: var(--queen-gold-500);">YouTube</span>
+                                <span class="text-sm text-neutral-400">Watch our performances</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="max-w-4xl mx-auto mt-6 text-center text-sm text-neutral-400 border-t border-neutral-800 pt-4">
                 <p>Please note that Hammer To Fall are NOT in any way officially endorsed by Queen or Queen Productions.</p>
             </div>
@@ -327,46 +385,6 @@
             </div>
         </section>
 
-        <section id="contact" class="page-transition hidden">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-                <p class="text-neutral-400 mb-8">Book us for your event or ask any questions</p>
-
-                <div class="bg-neutral-900 rounded-lg p-8">
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block mb-2 font-semibold">Name</label>
-                                <input type="text" id="contact-name" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                            </div>
-                            <div>
-                                <label class="block mb-2 font-semibold">Email</label>
-                                <input type="email" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="block mb-2 font-semibold">Inquiry Type</label>
-                            <select class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                                <option>Select an option</option>
-                                <option>Venue Booking</option>
-                                <option>Private Event</option>
-                                <option>General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="block mb-2 font-semibold">Message</label>
-                            <textarea class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700 h-32"></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="px-8 py-3 rounded font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Submit Venue Inquiry</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="bg-neutral-900 border-t border-neutral-800 mt-20">
