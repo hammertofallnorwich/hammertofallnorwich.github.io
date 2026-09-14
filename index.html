@@ -527,6 +527,7 @@
             const form = document.getElementById('contact-form');
             const contactSection = document.getElementById('home-contact');
             if (!contactSection) return;
+            if (form) form.reset();
 
             const successBanner = document.createElement('div');
             successBanner.className = 'mb-4 rounded-lg border border-green-500/40 bg-green-500/10 px-4 py-3 text-sm text-green-200';
