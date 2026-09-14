@@ -97,6 +97,14 @@
             box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
         }
 
+        .honeypot-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+ 
         @media (prefers-reduced-motion: reduce) {
             .hero-bg {
                 background-position: center center;
@@ -241,10 +249,19 @@
                         <p class="text-neutral-400 text-sm mb-6">Fill out the form and we'll get back to you soon with availability and pricing.</p>
                         <form id="contact-form" action="https://formspree.io/f/xbgjnpdo" method="POST" class="space-y-4">
                             <input type="hidden" name="_subject" value="Hammer to Fall Contact Form">
-                            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                            <input type="hidden" name="page_path" value="">
+                            <input type="hidden" name="page_title" value="">
+                            <input type="hidden" name="form_rendered_at" value="">
+                            <input type="hidden" name="first_interaction_at" value="">
+                            <input type="hidden" name="submitted_at" value="">
+                            <input type="hidden" name="client_timezone" value="">
+                            <div class="honeypot-field" aria-hidden="true">
+                                <label for="contact-company">Leave this field empty</label>
+                                <input type="text" id="contact-company" name="_gotcha" tabindex="-1" autocomplete="off">
+                            </div>
                             <div>
                                 <label class="block mb-2 font-semibold text-sm">Name</label>
-                                <input type="text" id="contact-name" name="name" required minlength="2" maxlength="100" autocomplete="name" class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                <input type="text" id="contact-name" name="name" required minlength="2" maxlength="80" autocomplete="name" class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
                             </div>
                             <div>
                                 <label class="block mb-2 font-semibold text-sm">Email</label>
@@ -524,6 +541,32 @@
             const contactSection = document.getElementById('home-contact');
             if (!form || !contactSection) return;
 
+            const MINIMUM_SUBMIT_DELAY_MS = 3000;
+            const SUBMIT_COOLDOWN_MS = 5000;
+            const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            const FIELD_LIMITS = {
+                name: 80,
+                email: 254,
+                message: 2000
+            };
+            const renderedAt = Date.now();
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton ? submitButton.textContent : 'Submit Inquiry';
+            const nameInput = form.elements.namedItem('name');
+            const emailInput = form.elements.namedItem('email');
+            const messageInput = form.elements.namedItem('message');
+            const honeypotInput = form.elements.namedItem('_gotcha');
+            const pagePathInput = form.elements.namedItem('page_path');
+            const pageTitleInput = form.elements.namedItem('page_title');
+            const renderedAtInput = form.elements.namedItem('form_rendered_at');
+            const firstInteractionAtInput = form.elements.namedItem('first_interaction_at');
+            const submittedAtInput = form.elements.namedItem('submitted_at');
+            const clientTimezoneInput = form.elements.namedItem('client_timezone');
+            let firstInteractionAt = null;
+            let cooldownUntil = 0;
+            let cooldownTimerId = null;
+            let isSubmitting = false;
+
             function removeStatusBanner() {
                 const existing = document.getElementById('contact-form-status');
                 if (existing) existing.remove();
@@ -541,12 +584,151 @@
                 form.parentNode.insertBefore(banner, form);
             }
 
+            function setHiddenValue(field, value) {
+                if (field) {
+                    field.value = value;
+                }
+            }
+
+            function primeMetadataFields() {
+                setHiddenValue(pagePathInput, window.location.pathname || '/');
+                setHiddenValue(pageTitleInput, document.title);
+                setHiddenValue(renderedAtInput, new Date(renderedAt).toISOString());
+                setHiddenValue(clientTimezoneInput, (Intl.DateTimeFormat().resolvedOptions().timeZone || '').slice(0, 100));
+            }
+
+            function markFirstInteraction() {
+                if (firstInteractionAt === null) {
+                    firstInteractionAt = Date.now();
+                    setHiddenValue(firstInteractionAtInput, new Date(firstInteractionAt).toISOString());
+                }
+            }
+
+            function trimFieldValue(field) {
+                if (!field || typeof field.value !== 'string') {
+                    return '';
+                }
+
+                const trimmedValue = field.value.trim();
+                field.value = trimmedValue;
+                return trimmedValue;
+            }
+
+            function scheduleCooldownReset() {
+                if (!submitButton) {
+                    return;
+                }
+
+                if (cooldownTimerId) {
+                    window.clearTimeout(cooldownTimerId);
+                }
+
+                const remainingMs = cooldownUntil - Date.now();
+                if (remainingMs <= 0) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Please wait...';
+                cooldownTimerId = window.setTimeout(() => {
+                    if (!isSubmitting && Date.now() >= cooldownUntil) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                }, remainingMs);
+            }
+
+            function startCooldown(fromTimestamp) {
+                cooldownUntil = fromTimestamp + SUBMIT_COOLDOWN_MS;
+                if (!isSubmitting) {
+                    scheduleCooldownReset();
+                }
+            }
+
+            function validateContactForm() {
+                const name = trimFieldValue(nameInput);
+                const email = trimFieldValue(emailInput);
+                const message = trimFieldValue(messageInput);
+
+                if (honeypotInput && honeypotInput.value.trim() !== '') {
+                    return 'Sorry, we could not send your message. Please try again.';
+                }
+
+                if (!name) {
+                    return 'Please enter your name.';
+                }
+
+                if (name.length > FIELD_LIMITS.name) {
+                    return `Please keep your name under ${FIELD_LIMITS.name} characters.`;
+                }
+
+                if (!email) {
+                    return 'Please enter your email address.';
+                }
+
+                if (email.length > FIELD_LIMITS.email) {
+                    return `Please keep your email under ${FIELD_LIMITS.email} characters.`;
+                }
+
+                if (!emailInput.checkValidity() || !EMAIL_PATTERN.test(email)) {
+                    return 'Please enter a valid email address.';
+                }
+
+                if (!message) {
+                    return 'Please enter a message.';
+                }
+
+                if (message.length > FIELD_LIMITS.message) {
+                    return `Please keep your message under ${FIELD_LIMITS.message} characters.`;
+                }
+
+                return '';
+            }
+
+            primeMetadataFields();
+            ['focusin', 'input', 'pointerdown'].forEach((eventName) => {
+                form.addEventListener(eventName, markFirstInteraction, { passive: eventName === 'pointerdown' });
+            });
+
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 removeStatusBanner();
 
-                const submitButton = form.querySelector('button[type="submit"]');
-                const originalButtonText = submitButton ? submitButton.textContent : '';
+                const validationMessage = validateContactForm();
+                if (!form.reportValidity()) {
+                    return;
+                }
+
+                const now = Date.now();
+
+                if (now < cooldownUntil) {
+                    renderStatusBanner('error', 'Please wait a few seconds before sending another message.');
+                    return;
+                }
+
+                if (validationMessage) {
+                    startCooldown(now);
+                    renderStatusBanner('error', validationMessage);
+                    return;
+                }
+
+                if (now - renderedAt < MINIMUM_SUBMIT_DELAY_MS) {
+                    startCooldown(now);
+                    renderStatusBanner('error', 'Please wait a few seconds before submitting the form.');
+                    return;
+                }
+
+                if (isSubmitting) {
+                    return;
+                }
+
+                isSubmitting = true;
+                startCooldown(now);
+                setHiddenValue(submittedAtInput, new Date(now).toISOString());
+                setHiddenValue(pagePathInput, window.location.pathname || '/');
+                setHiddenValue(pageTitleInput, document.title);
 
                 if (submitButton) {
                     submitButton.disabled = true;
@@ -566,13 +748,21 @@
                     }
 
                     form.reset();
+                    primeMetadataFields();
+                    firstInteractionAt = null;
+                    setHiddenValue(firstInteractionAtInput, '');
                     renderStatusBanner('success', 'Thanks! Your message has been sent successfully. We’ll get back to you soon.');
                 } catch (error) {
                     renderStatusBanner('error', 'Sorry, there was a problem sending your message. Please try again.');
                 } finally {
+                    isSubmitting = false;
                     if (submitButton) {
-                        submitButton.disabled = false;
-                        submitButton.textContent = originalButtonText || 'Submit Inquiry';
+                        if (Date.now() < cooldownUntil) {
+                            scheduleCooldownReset();
+                        } else {
+                            submitButton.disabled = false;
+                            submitButton.textContent = originalButtonText || 'Submit Inquiry';
+                        }
                     }
                 }
             });
