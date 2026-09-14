@@ -115,7 +115,6 @@
             <nav class="hidden md:flex gap-8">
                 <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
                 <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
-                <button onclick="navigateTo('contact')" id="tab-contact" class="hover:text-neutral-300 transition">Contact Us</button>
             </nav>
 
             <div class="md:hidden">
@@ -130,7 +129,6 @@
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
             <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
             <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
-            <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact Us</button>
         </div>
     </header>
 
@@ -153,8 +151,8 @@
                     </p>
 
                     <div class="flex gap-4 justify-center flex-wrap">
-                        <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Watch Promo</button>
-                        <button onclick="document.getElementById('home-gig-dates').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Gig Dates</button>
+                        <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Watch Band Promo</button>
+                        <button onclick="document.getElementById('home-gig-dates').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">View Gig Dates</button>
                     </div>
                 </div>
             </div>
@@ -171,7 +169,7 @@
                         More than a band, Hammer to Fall are a spectacle — a full-throttle celebration of Queen, delivered with stadium-sized energy and meticulous musical devotion.
                     </p>
                     <p>
-                        <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of "Prince Ali" on ITV's The Voice UK 2020 captivated millions and showcased a voice of extraordinary range and power.
+                        <strong>A Voice Fit for Royalty.</strong> At the centre of Hammer to Fall stands Chris Preece, whose electrifying performance of "Prince Ali" on ITV's The Voice UK 2020 captivated audiences nationwide.
                     </p>
                     <p>
                         Chris brings a vocal presence that doesn't simply echo Freddie's spirit — it commands the spotlight, soaring from tender falsetto to full-throttle rock majesty.
@@ -196,9 +194,9 @@
                     <span style="color: var(--queen-gold-500);">Upcoming Gig Dates</span>
                 </h3>
 
-                <div class="max-w-4xl mx-auto space-y-4">
-                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div class="flex-1">
+                <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col justify-between">
+                        <div>
                             <div class="flex gap-4 mb-2 flex-wrap">
                                 <span class="font-bold">October 17, 2026</span>
                                 <span class="text-neutral-400">Holt, Norfolk</span>
@@ -208,13 +206,13 @@
                                 <p class="text-sm text-neutral-400">7:30 PM</p>
                             </div>
                         </div>
-                        <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">
+                        <button class="mt-4 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">
                             Tickets
                         </button>
                     </div>
 
-                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div class="flex-1">
+                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col justify-between">
+                        <div>
                             <div class="flex gap-4 mb-2 flex-wrap">
                                 <span class="font-bold">November 17, 2026</span>
                                 <span class="text-neutral-400">Thetford, Norfolk</span>
@@ -224,9 +222,72 @@
                                 <p class="text-sm text-neutral-400">7:30 PM</p>
                             </div>
                         </div>
-                        <button class="mt-4 md:mt-0 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">
+                        <button class="mt-4 px-6 py-2 rounded" style="background-color: var(--queen-gold-500); color: #000;">
                             Tickets
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="home-contact" class="mt-14">
+                <h3 class="text-2xl font-bold mb-6 text-center">
+                    <span style="color: var(--queen-gold-500);">Get in Touch</span>
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-neutral-900 rounded-lg p-6">
+                        <h4 class="font-semibold mb-4">Book us for your event</h4>
+                        <p class="text-neutral-400 text-sm mb-6">Fill out the form and we'll get back to you soon with availability and pricing.</p>
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block mb-2 font-semibold text-sm">Name</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-semibold text-sm">Email</label>
+                                <input type="email" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-semibold text-sm">Inquiry Type</label>
+                                <select class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
+                                    <option>Select an option</option>
+                                    <option>Venue Booking</option>
+                                    <option>Private Event</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block mb-2 font-semibold text-sm">Message</label>
+                                <textarea class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700 h-24"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-3 rounded font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Submit Inquiry</button>
+                        </form>
+                    </div>
+
+                    <div class="bg-neutral-900 rounded-lg p-6 flex flex-col justify-center">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold mb-2" style="color: var(--queen-gold-500);">Follow Us</h4>
+                                <p class="text-neutral-400 text-sm mb-4">Stay updated on our latest performances and announcements</p>
+                                <div class="flex gap-3">
+                                    <a href="https://www.facebook.com/Hammertofallnorwich/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+                                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.688 4.533-4.688 1.312 0 2.686.238 2.686.238v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796V24c5.737-.788 9.898-5.933 9.898-12.602z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/hammer2fall_nch?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
+                                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M7.5 0h9C20.538 0 24 3.462 24 7.5v9c0 4.038-3.462 7.5-7.5 7.5h-9C3.462 24 0 20.538 0 16.5v-9C0 3.462 3.462 0 7.5 0zm0 2A5.506 5.506 0 0 0 2 7.5v9A5.506 5.506 0 0 0 7.5 22h9a5.506 5.506 0 0 0 5.5-5.5v-9A5.506 5.506 0 0 0 16.5 2h-9zm9 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-4.5 1.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://youtube.com/@hammertofallnorwich?si=UJ57kttmZryOTNW1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
+                                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M23.498 6.186a2.999 2.999 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566a2.999 2.999 0 0 0-2.112 2.12A31.19 31.19 0 0 0 0 12a31.19 31.19 0 0 0 .502 5.814 2.999 2.999 0 0 0 2.112 2.12c1.881.536 9.386.536 9.386.536s7.505 0 9.386-.566a2.999 2.999 0 0 0 2.112-2.12A31.19 31.19 0 0 0 24 12a31.19 31.19 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,47 +387,6 @@
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="page-transition hidden">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-                <p class="text-neutral-400 mb-8">Book us for your event or ask any questions</p>
-
-                <div class="bg-neutral-900 rounded-lg p-8">
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label class="block mb-2 font-semibold">Name</label>
-                                <input type="text" id="contact-name" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                            </div>
-                            <div>
-                                <label class="block mb-2 font-semibold">Email</label>
-                                <input type="email" required class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="block mb-2 font-semibold">Inquiry Type</label>
-                            <select class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700">
-                                <option>Select an option</option>
-                                <option>Venue Booking</option>
-                                <option>Private Event</option>
-                                <option>General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-6">
-                            <label class="block mb-2 font-semibold">Message</label>
-                            <textarea class="w-full px-4 py-2 rounded bg-neutral-800 text-white border border-neutral-700 h-32"></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="px-8 py-3 rounded font-semibold" style="background-color: var(--queen-gold-500); color: #000;">Submit Venue Inquiry</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="bg-neutral-900 border-t border-neutral-800 mt-20">
@@ -380,17 +400,17 @@
             <div class="flex gap-4 justify-center items-center">
                 <a href="https://www.facebook.com/Hammertofallnorwich/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.688 4.533-4.688 1.312 0 2.686.238 2.686.238v2.98H15.83c-1.491 0-1.955.93-1.955 1.887v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.099 24 12.073z"></path>
+                        <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.099 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.791-4.688 4.533-4.688 1.312 0 2.686.238 2.686.238v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796V24c5.737-.788 9.898-5.933 9.898-12.602z"></path>
                     </svg>
                 </a>
                 <a href="https://www.instagram.com/hammer2fall_nch?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M7.5 0h9C20.538 0 24 3.462 24 7.5v9c0 4.038-3.462 7.5-7.5 7.5h-9C3.462 24 0 20.538 0 16.5v-9C0 3.462 3.462 0 7.5 0zm0 2A5.506 5.506 0 0 0 2 7.5v9A5.506 5.506 0 0 0 7.5 22h9a5.506 5.506 0 0 0 5.5-5.5v-9A5.506 5.506 0 0 0 16.5 2h-9zm10.75 2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 6.25A5.75 5.75 0 1 1 6.25 12 5.757 5.757 0 0 1 12 6.25zm0 2A3.75 3.75 0 1 0 15.75 12 3.754 3.754 0 0 0 12 8.25z"></path>
+                        <path d="M7.5 0h9C20.538 0 24 3.462 24 7.5v9c0 4.038-3.462 7.5-7.5 7.5h-9C3.462 24 0 20.538 0 16.5v-9C0 3.462 3.462 0 7.5 0zm0 2A5.506 5.506 0 0 0 2 7.5v9A5.506 5.506 0 0 0 7.5 22h9a5.506 5.506 0 0 0 5.5-5.5v-9A5.506 5.506 0 0 0 16.5 2h-9zm9 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-4.5 1.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"></path>
                     </svg>
                 </a>
                 <a href="https://youtube.com/@hammertofallnorwich?si=UJ57kttmZryOTNW1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
                     <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M23.498 6.186a2.999 2.999 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566a2.999 2.999 0 0 0-2.112 2.12A31.19 31.19 0 0 0 0 12a31.19 31.19 0 0 0 .502 5.814 2.999 2.999 0 0 0 2.112 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.566a2.999 2.999 0 0 0 2.112-2.12A31.19 31.19 0 0 0 24 12a31.19 31.19 0 0 0-.502-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"></path>
+                        <path d="M23.498 6.186a2.999 2.999 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566a2.999 2.999 0 0 0-2.112 2.12A31.19 31.19 0 0 0 0 12a31.19 31.19 0 0 0 .502 5.814 2.999 2.999 0 0 0 2.112 2.12c1.881.536 9.386.536 9.386.536s7.505 0 9.386-.566a2.999 2.999 0 0 0 2.112-2.12A31.19 31.19 0 0 0 24 12a31.19 31.19 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
                     </svg>
                 </a>
             </div>
