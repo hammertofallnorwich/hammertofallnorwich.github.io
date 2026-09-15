@@ -64,6 +64,31 @@
             min-height: 400px;
         }
 
+        .about-section {
+            position: relative;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('./Hammer_crest_queen.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .about-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .footer-social-link {
             display: inline-flex;
             align-items: center;
@@ -166,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="max-w-4xl mx-auto mb-12 text-center">
+            <div class="about-section max-w-4xl mx-auto mb-12 text-center">
                 <span class="text-neutral-400 uppercase tracking-[0.3em] text-xm" style="color: var(--queen-gold-500);">About Us</span>
                 <!-- <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">A voice fit for royalty</h2> -->
                 <div class="space-y-5 text-neutral-300 leading-relaxed text-lg">
