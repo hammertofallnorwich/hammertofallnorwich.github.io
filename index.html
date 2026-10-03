@@ -100,6 +100,10 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
+        #meet-the-band .member-card + .member-card {
+            margin-top: 1.5rem;
+        }
+
         .member-card:hover {
             transform: translateY(-4px);
             border-color: #d4af37;
@@ -243,7 +247,7 @@
                 <h3 class="text-2xl font-bold mb-6 text-center">
                     <span style="color: var(--queen-gold-500);">Meet the Band</span>
                 </h3>
-                <div class="member-card mb-6">
+                <div class="member-card">
                     <img src="./chris_singer.jpeg" alt="Chris Preece - Lead Vocals" loading="lazy">
                     <div class="space-y-4 text-neutral-300 leading-relaxed">
                         <h4 class="text-xl font-bold" style="color: var(--queen-gold-500);">Chris Preece - Lead Vocals</h4>
