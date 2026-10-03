@@ -98,11 +98,6 @@
             background: rgba(45, 27, 78, 0.35);
             border: 1px solid rgba(212, 175, 55, 0.35);
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            margin-bottom: 1.5rem;
-        }
-
-        .member-card:last-child {
-            margin-bottom: 0;
         }
 
         .member-card:hover {
@@ -248,7 +243,7 @@
                 <h3 class="text-2xl font-bold mb-6 text-center">
                     <span style="color: var(--queen-gold-500);">Meet the Band</span>
                 </h3>
-                <div class="member-card">
+                <div class="member-card mb-6">
                     <img src="./chris_singer.jpeg" alt="Chris Preece - Lead Vocals" loading="lazy">
                     <div class="space-y-4 text-neutral-300 leading-relaxed">
                         <h4 class="text-xl font-bold" style="color: var(--queen-gold-500);">Chris Preece - Lead Vocals</h4>
@@ -256,7 +251,7 @@
                         <p>A graduate of Leeds Conservatoire, Chris combines professional musical training with a lifelong passion for live performance. Equally at home performing rock anthems, m[...]
                     </div>
                 </div>
-                <div class="member-card">
+                <div class="member-card mb-6">
                     <img src="./Simon_bass.jpeg" alt="Simon - Bass & Backing Vocals" loading="lazy">
                     <div class="space-y-4 text-neutral-300 leading-relaxed">
                         <h4 class="text-xl font-bold" style="color: var(--queen-gold-500);">Simon - Bass & Backing Vocals</h4>
@@ -567,13 +562,13 @@
                 window.requestAnimationFrame(updateParallax);
             }
 
-            function removeParallexListeners() {
+            function removeParallaxListeners() {
                 window.removeEventListener('scroll', requestParallaxUpdate);
                 window.removeEventListener('resize', requestParallaxUpdate);
             }
 
             function enableParallax() {
-                removeParallexListeners();
+                removeParallaxListeners();
                 window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
                 window.addEventListener('resize', requestParallaxUpdate);
                 requestParallaxUpdate();
@@ -581,7 +576,7 @@
 
             function handleReducedMotionChange(event) {
                 if (event.matches) {
-                    removeParallexListeners();
+                    removeParallaxListeners();
                     hero.style.backgroundPosition = 'center center';
                     return;
                 }
@@ -596,7 +591,7 @@
             }
 
             heroParallaxCleanupMap.set(hero, function cleanupHeroParallax() {
-                removeParallexListeners();
+                removeParallaxListeners();
 
                 if (typeof reducedMotionQuery.removeEventListener === 'function') {
                     reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
