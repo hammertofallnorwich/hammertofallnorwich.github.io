@@ -89,6 +89,35 @@
             z-index: 1;
         }
 
+        .member-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: rgba(45, 27, 78, 0.35);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-4px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .member-card img {
+            width: 100%;
+            border-radius: 0.75rem;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+        }
+
+        @media (min-width: 768px) {
+            .member-card { flex-direction: row; align-items: center; }
+            .member-card img { width: 40%; }
+        }
+
         .footer-social-link {
             display: inline-flex;
             align-items: center;
@@ -211,6 +240,20 @@
                     <p style="color: var(--queen-gold-500); font-style: italic;">
                         Together, the band transforms every venue into a night of pure Queen magic.
                     </p>
+                </div>
+            </div>
+
+            <div id="meet-the-band" class="max-w-4xl mx-auto mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center">
+                    <span style="color: var(--queen-gold-500);">Meet the Band</span>
+                </h3>
+                <div class="member-card">
+                    <img src="./60B48687-05EA-4380-86B7-84330881B205.jpeg" alt="Chris - Keyboards" loading="lazy">
+                    <div class="space-y-4 text-neutral-300 leading-relaxed">
+                        <h4 class="text-xl font-bold" style="color: var(--queen-gold-500);">Chris - Keyboards</h4>
+                        <p>The first Queen album Chris owned was The Works. Decades later, the music that first captured his imagination is now the music he helps bring to audiences as a member of Hammer to Fall.</p>
+                        <p>A self-taught musician and multi-instrumentalist, Chris has spent more than 30 years performing and developing his craft. His musical journey has taken him through ska, indie and rock bands, each providing its own challenges, experiences and lasting friendships. While he has enjoyed every chapter along the way, being able to perform the incredible music of Queen with Hammer to Fall remains a genuine privilege and honour.</p>
+                    </div>
                 </div>
             </div>
 
