@@ -184,11 +184,6 @@
                 <h1 class="text-2xl font-bold tracking-wider" style="color: var(--queen-gold-500);">HAMMER TO FALL</h1>
             </div>
 
-            <nav class="hidden md:flex gap-8">
-                <button onclick="navigateTo('home')" id="tab-home" class="active-tab hover:text-neutral-300 transition">Home</button>
-                <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
-            </nav>
-
             <div class="relative">
                 <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,8 +191,8 @@
                     </svg>
                 </button>
                 <nav id="mobile-menu" aria-label="Site menu" class="hidden absolute right-0 mt-2 w-56 bg-neutral-900 border border-neutral-800 rounded-lg shadow-lg">
-                    <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
-                    <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
+                    <button onclick="navigateTo('home')" id="tab-home" class="active-tab block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
+                    <button onclick="navigateTo('music')" id="tab-music" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
                     <button onclick="navigateTo('home', 'band-promo')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Watch Band Promo</button>
                     <button onclick="navigateTo('home', 'home-gig-dates')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">View Gig Dates</button>
                     <button onclick="navigateTo('home', 'home-contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact Us</button>
