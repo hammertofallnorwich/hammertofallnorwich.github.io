@@ -55,11 +55,20 @@
 
         .hero-bg {
             background-image: url('./Hammer_2_fall_banner_wide.png');
-            background-size: contain;
+            background-size: 100% auto;
             background-position: center center;
             background-repeat: no-repeat;
             aspect-ratio: 3 / 2;
             min-height: 400px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero-bg {
+                aspect-ratio: 2 / 1;
+            }
         }
 
         .about-section {
@@ -168,7 +177,7 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-3 h-3 rounded-full" style="background-color: var(--queen-gold-500);"></div>
-                <span class="text-2xl font-bold tracking-wider" style="color: var(--queen-gold-500);">HAMMER TO FALL</span>
+                <h1 class="text-2xl font-bold tracking-wider" style="color: var(--queen-gold-500);">HAMMER TO FALL</h1>
             </div>
 
             <nav class="hidden md:flex gap-8">
@@ -198,12 +207,8 @@
     <main class="container mx-auto px-4 py-12">
         <section id="home" class="page-transition">
             <div id="home-hero" class="hero-bg relative border border-neutral-800 mb-12">
-                <div class="relative z-10 px-6 pt-16 pb-12 md:px-16 md:pt-16 md:pb-14 text-center">
-                    <h1 class="text-6xl md:text-8xl font-black mt-2 leading-tight" style="color: var(--queen-gold-500);">
-                        HAMMER TO FALL
-                    </h1>
-
-                    <div class="mt-28 md:mt-44 flex gap-4 justify-center flex-wrap">
+                <div class="relative z-10 px-6 py-12 md:px-16 md:pb-14 text-center">
+                    <div class="flex gap-4 justify-center flex-wrap">
                         <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Watch Band Promo</button>
                         <button onclick="document.getElementById('home-gig-dates').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">View Gig Dates</button>
                         <button onclick="document.getElementById('home-contact').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Contact Us</button>
