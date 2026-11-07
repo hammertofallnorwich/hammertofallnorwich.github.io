@@ -54,13 +54,11 @@
         }
 
         .hero-bg {
-            background-image:
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.5)),
-                url('./Hammer_2_fall_banner_wide.png');
-            background-size: cover;
+            background-image: url('./Hammer_2_fall_banner_wide.png');
+            background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
-            will-change: background-position;
+            aspect-ratio: 3 / 2;
             min-height: 400px;
         }
 
@@ -163,11 +161,6 @@
             overflow: hidden;
         }
  
-        @media (prefers-reduced-motion: reduce) {
-            .hero-bg {
-                background-position: center center;
-            }
-        }
     </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
@@ -204,10 +197,8 @@
 
     <main class="container mx-auto px-4 py-12">
         <section id="home" class="page-transition">
-            <div id="home-hero" class="hero-bg relative overflow-hidden rounded-3xl border border-neutral-800 mb-12">
-                <div class="absolute inset-0 blur-2xl opacity-15" style="background: radial-gradient(circle at top, var(--queen-purple) 0%, transparent 65%)"></div>
-
-                     <div class="relative z-10 px-6 pt-16 pb-12 md:px-16 md:pt-16 md:pb-14 text-center">
+            <div id="home-hero" class="hero-bg relative border border-neutral-800 mb-12">
+                <div class="relative z-10 px-6 pt-16 pb-12 md:px-16 md:pt-16 md:pb-14 text-center">
                     <h1 class="text-6xl md:text-8xl font-black mt-2 leading-tight" style="color: var(--queen-gold-500);">
                         HAMMER TO FALL
                     </h1>
@@ -541,94 +532,6 @@
             document.getElementById('mobile-menu').classList.add('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        (function initHeroParallax() {
-            const cleanupMapKey = Symbol.for('homeHeroParallaxCleanupMap');
-            const heroParallaxCleanupMap = window[cleanupMapKey] || new WeakMap();
-            const hero = document.getElementById('home-hero');
-
-            if (!hero) {
-                return;
-            }
-
-            window[cleanupMapKey] = heroParallaxCleanupMap;
-
-            const existingCleanup = heroParallaxCleanupMap.get(hero);
-
-            if (typeof existingCleanup === 'function') {
-                existingCleanup();
-            }
-
-            hero.dataset.parallaxInitialized = 'true';
-            const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-            let ticking = false;
-
-            function updateParallax() {
-                ticking = false;
-
-                const rect = hero.getBoundingClientRect();
-                const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-                const clampedTop = Math.min(viewportHeight, Math.max(-rect.height, rect.top));
-                const offset = Math.round(clampedTop * -0.08);
-                hero.style.backgroundPosition = `center ${offset}px`;
-            }
-
-            function requestParallaxUpdate() {
-                if (ticking) {
-                    return;
-                }
-
-                ticking = true;
-                window.requestAnimationFrame(updateParallax);
-            }
-
-            function removeParallaxListeners() {
-                window.removeEventListener('scroll', requestParallaxUpdate);
-                window.removeEventListener('resize', requestParallaxUpdate);
-            }
-
-            function enableParallax() {
-                removeParallaxListeners();
-                window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
-                window.addEventListener('resize', requestParallaxUpdate);
-                requestParallaxUpdate();
-            }
-
-            function handleReducedMotionChange(event) {
-                if (event.matches) {
-                    removeParallaxListeners();
-                    hero.style.backgroundPosition = 'center center';
-                    return;
-                }
-
-                enableParallax();
-            }
-
-            if (typeof reducedMotionQuery.addEventListener === 'function') {
-                reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-            } else {
-                reducedMotionQuery.addListener(handleReducedMotionChange);
-            }
-
-            heroParallaxCleanupMap.set(hero, function cleanupHeroParallax() {
-                removeParallaxListeners();
-
-                if (typeof reducedMotionQuery.removeEventListener === 'function') {
-                    reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
-                } else {
-                    reducedMotionQuery.removeListener(handleReducedMotionChange);
-                }
-                heroParallaxCleanupMap.delete(hero);
-            });
-
-            if (reducedMotionQuery.matches) {
-                hero.style.backgroundPosition = 'center center';
-                return;
-            }
-
-            enableParallax();
-        })();
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
