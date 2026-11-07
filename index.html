@@ -65,6 +65,10 @@
             justify-content: center;
         }
 
+        #band-promo, #home-gig-dates, #home-contact {
+            scroll-margin-top: 6rem;
+        }
+
         @media (min-width: 768px) {
             .hero-bg {
                 aspect-ratio: 2 / 1;
@@ -185,18 +189,20 @@
                 <button onclick="navigateTo('music')" id="tab-music" class="hover:text-neutral-300 transition">Music</button>
             </nav>
 
-            <div class="md:hidden">
-                <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu">
+            <div class="relative">
+                <button id="mobile-menu-btn" class="p-2" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+                <nav id="mobile-menu" aria-label="Site menu" class="hidden absolute right-0 mt-2 w-56 bg-neutral-900 border border-neutral-800 rounded-lg shadow-lg">
+                    <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
+                    <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
+                    <button onclick="navigateTo('home', 'band-promo')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Watch Band Promo</button>
+                    <button onclick="navigateTo('home', 'home-gig-dates')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">View Gig Dates</button>
+                    <button onclick="navigateTo('home', 'home-contact')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Contact Us</button>
+                </nav>
             </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800">
-            <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Home</button>
-            <button onclick="navigateTo('music')" class="block w-full text-left px-4 py-2 hover:bg-neutral-800">Music</button>
         </div>
     </header>
 
@@ -206,15 +212,7 @@
 
     <main class="container mx-auto px-4 py-12">
         <section id="home" class="page-transition">
-            <div id="home-hero" class="hero-bg relative border border-neutral-800 mb-12">
-                <div class="relative z-10 px-6 py-12 md:px-16 md:pb-14 text-center">
-                    <div class="flex gap-4 justify-center flex-wrap">
-                        <button onclick="document.getElementById('band-promo').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Watch Band Promo</button>
-                        <button onclick="document.getElementById('home-gig-dates').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">View Gig Dates</button>
-                        <button onclick="document.getElementById('home-contact').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-3 rounded-full font-semibold border-2 hover:scale-105 transition" style="border-color: var(--queen-gold-500); color: var(--queen-gold-500);">Contact Us</button>
-                    </div>
-                </div>
-            </div>
+            <div id="home-hero" class="hero-bg relative border border-neutral-800 mb-12"></div>
 
             <div class="about-section max-w-4xl mx-auto mb-12 text-center">
                 <span class="text-neutral-400 uppercase tracking-[0.3em] text-xm" style="color: var(--queen-gold-500);">About Us</span>
@@ -509,7 +507,7 @@
     </footer>
 
     <script>
-        function navigateTo(pageId) {
+        function navigateTo(pageId, targetId) {
             const pages = document.querySelectorAll('section');
             pages.forEach(page => {
                 page.classList.add('hidden');
@@ -526,7 +524,7 @@
                 }, 50);
             }
 
-            const tabs = document.querySelectorAll('nav button');
+            const tabs = document.querySelectorAll('#tab-home, #tab-music');
             tabs.forEach(tab => tab.classList.remove('active-tab'));
 
             const activeTab = document.getElementById(`tab-${pageId}`);
@@ -534,15 +532,38 @@
                 activeTab.classList.add('active-tab');
             }
 
-            document.getElementById('mobile-menu').classList.add('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            closeMenu();
+            if (targetId) {
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', event => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMenu();
+                mobileMenuBtn.focus();
+            }
         });
 
         (function wireContactFormAjaxSubmit() {
